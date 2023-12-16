@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{47A79276-68A9-4E77-AA1E-AEC962E3D884}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sub Main</StartupObject>
+    <RootNamespace>RetailManagementSystem</RootNamespace>
+    <AssemblyName>RetailManagementSystem</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>C:\GGC_Systems\vb.net\RetMgySys\</OutputPath>
+    <DocumentationFile>RetailManagementSystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>RetailManagementSystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\CrystalDecisions.Data.AdoDotNetInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="ggcAppDriver, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\ggcAppDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="ggcClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\ggcClient.dll</HintPath>
+    </Reference>
+    <Reference Include="ggcLRReports, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\ggcLRReports.dll</HintPath>
+    </Reference>
+    <Reference Include="ggcRetailSales">
+      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\ggcRetailSales.dll</HintPath>
+    </Reference>
+    <Reference Include="ggcTempObj, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\ggcTempObj.dll</HintPath>
+    </Reference>
+    <Reference Include="Multimedia, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\Multimedia.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2020.0.1.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\stdole.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WinSCPnet, Version=1.8.3.11749, Culture=neutral, PublicKeyToken=2271ec4a3c56d0bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\WinSCPnet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ggcRMSReports" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="PdfSharp.Charting" />
+    <Import Include="Renci.SshNet" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInventory1.designer.vb">
+      <DependentUpon>frmInventory1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventory1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDiscount.Designer.vb">
+      <DependentUpon>frmDiscount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDiscount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEjournal.Designer.vb">
+      <DependentUpon>frmEjournal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEjournal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReports.Designer.vb">
+      <DependentUpon>frmReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTerminal.Designer.vb">
+      <DependentUpon>frmTerminal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTerminal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmZReading.designer.vb">
+      <DependentUpon>frmZReading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmZReading.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromoDiscount.designer.vb">
+      <DependentUpon>frmPromoDiscount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromoDiscount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromoAddOn.designer.vb">
+      <DependentUpon>frmPromoAddOn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromoAddOn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalesPromo.designer.vb">
+      <DependentUpon>frmSalesPromo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalesPromo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSysUser.designer.vb">
+      <DependentUpon>frmSysUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSysUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTerm.designer.vb">
+      <DependentUpon>frmTerm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTerm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAffiliates.Designer.vb">
+      <DependentUpon>frmAffiliates.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAffiliates.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBanks.designer.vb">
+      <DependentUpon>frmBanks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBanks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBin.designer.vb">
+      <DependentUpon>frmBin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDiscountCard.designer.vb">
+      <DependentUpon>frmDiscountCard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDiscountCard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInventory.designer.vb">
+      <DependentUpon>frmInventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInventory_Type.designer.vb">
+      <DependentUpon>frmInventory_Type.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventory_Type.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMachine.designer.vb">
+      <DependentUpon>frmMachine.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMachine.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMeasure.designer.vb">
+      <DependentUpon>frmMeasure.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMeasure.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProduct_Category.designer.vb">
+      <DependentUpon>frmProduct_Category.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProduct_Category.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSection.designer.vb">
+      <DependentUpon>frmSection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSize.designer.vb">
+      <DependentUpon>frmSize.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSize.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdiMain.designer.vb">
+      <DependentUpon>mdiMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mdiMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modMain.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInventory1.resx">
+      <DependentUpon>frmInventory1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDiscount.resx">
+      <DependentUpon>frmDiscount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEjournal.resx">
+      <DependentUpon>frmEjournal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReports.resx">
+      <DependentUpon>frmReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTerminal.resx">
+      <DependentUpon>frmTerminal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmZReading.resx">
+      <DependentUpon>frmZReading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromoDiscount.resx">
+      <DependentUpon>frmPromoDiscount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromoAddOn.resx">
+      <DependentUpon>frmPromoAddOn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalesPromo.resx">
+      <DependentUpon>frmSalesPromo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSysUser.resx">
+      <DependentUpon>frmSysUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTerm.resx">
+      <DependentUpon>frmTerm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAffiliates.resx">
+      <DependentUpon>frmAffiliates.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBanks.resx">
+      <DependentUpon>frmBanks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBin.resx">
+      <DependentUpon>frmBin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDiscountCard.resx">
+      <DependentUpon>frmDiscountCard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInventory.resx">
+      <DependentUpon>frmInventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInventory_Type.resx">
+      <DependentUpon>frmInventory_Type.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMachine.resx">
+      <DependentUpon>frmMachine.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMeasure.resx">
+      <DependentUpon>frmMeasure.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProduct_Category.resx">
+      <DependentUpon>frmProduct_Category.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSection.resx">
+      <DependentUpon>frmSection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSize.resx">
+      <DependentUpon>frmSize.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdiMain.resx">
+      <DependentUpon>mdiMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\void.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\browse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\end.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\details.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\motor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Code.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ESC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_Small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_Small_OnMouseOver.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_Small_OnMouseDown.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK_OnMouseOver.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK_OnMouseDown.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_OnMouseOver.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_OnMouseDown.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_OnMouseOver.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_OnMouseDown.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_Large.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Msgbox.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product Inquiry.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_OnMouseOver.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_OnMouseDown.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchInq.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\omit-item.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Leads.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ggcPayment\ggcPayment.vbproj">
+      <Project>{A7BB8738-7DD6-45A0-90C9-FC346648FBF3}</Project>
+      <Name>ggcPayment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ggcRetailParams\ggcRetailParams\ggcRetailParams.vbproj">
+      <Project>{4883f473-c0b0-4266-a9ac-8e4bca3c4cb7}</Project>
+      <Name>ggcRetailParams</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ggcRMSReports\ggcRMSReports.vbproj">
+      <Project>{59ddf956-b82b-46d8-955f-769d502647bf}</Project>
+      <Name>ggcRMSReports</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{2A75196C-D9EB-4129-B803-931327F72D5C}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="ggcAppDriver1">
+      <Guid>{C4CAE4CB-1528-4DC1-AD81-39CC335D0083}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

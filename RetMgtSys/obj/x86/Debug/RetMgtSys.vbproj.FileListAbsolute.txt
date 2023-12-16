@@ -1,0 +1,367 @@
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\SystemSupport\obj\x86\Debug\SystemSupport.exe
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\SystemSupport\obj\x86\Debug\SystemSupport.xml
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\SystemSupport\obj\x86\Debug\SystemSupport.pdb
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbprojResolveAssemblyReference.cache
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.exe
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.xml
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.pdb
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSysUser.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerm.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmAffiliates.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBanks.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBin.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscountCard.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory_Type.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMachine.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMeasure.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmProduct_Category.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSalesPromo.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSection.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSize.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.mdiMain.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Resources.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.GenerateResource.Cache
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.exe
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.xml
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.pdb
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoAddOn.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbprojResolveAssemblyReference.cache
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoAddOn.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSalesPromo.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSysUser.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerm.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmAffiliates.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBanks.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBin.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscountCard.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory_Type.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMachine.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMeasure.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmProduct_Category.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSection.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSize.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.mdiMain.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Resources.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.GenerateResource.Cache
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoDiscount.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmZReading.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmZReading.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoDiscount.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoAddOn.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSalesPromo.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSysUser.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerm.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmAffiliates.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBanks.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBin.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscountCard.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory_Type.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMachine.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMeasure.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmProduct_Category.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSection.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSize.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.mdiMain.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Resources.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.exe
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.xml
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.pdb
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmZReading.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoDiscount.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbprojResolveAssemblyReference.cache
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmZReading.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoDiscount.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoAddOn.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSalesPromo.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSysUser.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerm.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmAffiliates.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBanks.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBin.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscountCard.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory_Type.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMachine.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMeasure.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmProduct_Category.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSection.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSize.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.mdiMain.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Resources.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.GenerateResource.Cache
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.exe
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.xml
+D:\GMC SEG Folder\VBNET\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.pdb
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbprojResolveAssemblyReference.cache
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmZReading.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoDiscount.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoAddOn.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSalesPromo.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSysUser.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerm.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmAffiliates.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBanks.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBin.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscountCard.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory_Type.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMachine.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMeasure.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmProduct_Category.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSection.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSize.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.mdiMain.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Resources.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.GenerateResource.Cache
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.exe
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.xml
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.pdb
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbprojResolveAssemblyReference.cache
+Z:\GMC SEG Folder\vb.net\My Projects\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.GenerateResource.Cache
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.exe
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.xml
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.pdb
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbprojResolveAssemblyReference.cache
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmZReading.resources
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoDiscount.resources
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoAddOn.resources
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSalesPromo.resources
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSysUser.resources
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerm.resources
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmAffiliates.resources
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBanks.resources
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBin.resources
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscountCard.resources
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory.resources
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory_Type.resources
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMachine.resources
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMeasure.resources
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmProduct_Category.resources
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSection.resources
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSize.resources
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.mdiMain.resources
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Resources.resources
+\\192.168.10.12\d\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.GenerateResource.Cache
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbprojResolveAssemblyReference.cache
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscount.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmEjournal.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmReports.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerminal.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmZReading.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoDiscount.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoAddOn.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSalesPromo.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSysUser.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerm.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmAffiliates.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBanks.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBin.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscountCard.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory_Type.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMachine.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMeasure.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmProduct_Category.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSection.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSize.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.mdiMain.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Resources.resources
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.GenerateResource.Cache
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.exe
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.xml
+Y:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.pdb
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbprojResolveAssemblyReference.cache
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory1.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscount.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmEjournal.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmReports.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerminal.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmZReading.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoDiscount.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoAddOn.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSalesPromo.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSysUser.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerm.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmAffiliates.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBanks.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBin.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscountCard.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory_Type.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMachine.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMeasure.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmProduct_Category.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSection.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSize.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.mdiMain.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Resources.resources
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.GenerateResource.Cache
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.exe
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.xml
+D:\PEDRITOS POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.pdb
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbprojResolveAssemblyReference.cache
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory1.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscount.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmEjournal.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmReports.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerminal.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmZReading.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoDiscount.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoAddOn.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSalesPromo.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSysUser.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerm.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmAffiliates.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBanks.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBin.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscountCard.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory_Type.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMachine.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMeasure.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmProduct_Category.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSection.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSize.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.mdiMain.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Resources.resources
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.GenerateResource.Cache
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.exe
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.xml
+Y:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.pdb
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.AssemblyReference.cache
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.SuggestedBindingRedirects.cache
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Form1.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory1.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscount.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmEjournal.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmReports.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerminal.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmZReading.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoDiscount.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoAddOn.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSalesPromo.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSysUser.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerm.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmAffiliates.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBanks.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBin.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscountCard.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory_Type.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMachine.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMeasure.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmProduct_Category.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSection.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSize.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.mdiMain.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Resources.resources
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.GenerateResource.cache
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.CoreCompileInputs.cache
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.CopyComplete
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.exe
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.xml
+D:\Guanzon\Pedritos\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.pdb
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.AssemblyReference.cache
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Form1.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory1.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscount.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmEjournal.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmReports.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerminal.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmZReading.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoDiscount.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoAddOn.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSalesPromo.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSysUser.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerm.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmAffiliates.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBanks.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBin.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscountCard.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory_Type.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMachine.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMeasure.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmProduct_Category.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSection.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSize.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.mdiMain.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Resources.resources
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.GenerateResource.cache
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.CoreCompileInputs.cache
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.CopyComplete
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.exe
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.xml
+D:\POS\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.pdb
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.AssemblyReference.cache
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\Interop.ggcAppDriver.dll
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.ResolveComReference.cache
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Form1.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory1.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscount.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmEjournal.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmReports.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerminal.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmZReading.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoDiscount.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoAddOn.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSalesPromo.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSysUser.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerm.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmAffiliates.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBanks.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBin.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscountCard.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory_Type.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMachine.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMeasure.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmProduct_Category.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSection.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSize.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.mdiMain.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Resources.resources
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.GenerateResource.cache
+D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.CoreCompileInputs.cache
+C:\GGC_Systems\vb.net\RetMgySys\WinSCP.exe
+C:\GGC_Systems\vb.net\RetMgySys\RetailManagementSystem.exe.config
+C:\GGC_Systems\vb.net\RetMgySys\RetailManagementSystem.exe
+C:\GGC_Systems\vb.net\RetMgySys\RetailManagementSystem.pdb
+C:\GGC_Systems\vb.net\RetMgySys\RetailManagementSystem.xml
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.AssemblyReference.cache
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\Interop.ggcAppDriver.dll
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.ResolveComReference.cache
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Form1.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory1.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscount.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmEjournal.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmReports.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerminal.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmZReading.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoDiscount.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoAddOn.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSalesPromo.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSysUser.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerm.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmAffiliates.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBanks.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBin.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscountCard.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory_Type.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMachine.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMeasure.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmProduct_Category.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSection.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSize.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.mdiMain.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Resources.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.GenerateResource.cache
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.CoreCompileInputs.cache
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.CopyComplete
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.exe
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.xml
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.pdb
