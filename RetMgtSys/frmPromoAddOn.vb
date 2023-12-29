@@ -268,7 +268,7 @@ Public Class frmPromoAddOn
                     Me.Close()
                     GoTo endProc
                 Case 9
-                    If .EditMode = xeEditMode.xeModeAddNew Or .EditMode = xeEditMode.xeModeUpdate Then
+                    If .EditMode = xeEditMode.MODE_ADDNEW Or .EditMode = xeEditMode.MODE_UPDATE Then
                         If .Detail(.ItemCount - 1, "sStockIDx") <> "" Then
                             .newDetail()
                             loadDetail()
