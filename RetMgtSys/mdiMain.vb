@@ -17,7 +17,7 @@ Public Class mdiMain
 
     Private Sub mdiMain_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.F12 Then
-            If p_oAppDriver.UserLevel = xeUserRights.xeEngineer Then
+            If p_oAppDriver.UserLevel = xeUserRights.ENGINEER Then
                 If MsgBox("You are about to reset the Retail Management Database." & vbCrLf &
                             "Do you want to continue?", MsgBoxStyle.Question + vbYesNo, "Confirm") = vbYes Then
                     If ResetDatabase() Then
@@ -201,7 +201,7 @@ Public Class mdiMain
 
     Private Sub UserManagerToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles UserManagerToolStripMenuItem.Click
         With p_oAppDriver
-            If .UserLevel <> xeUserRights.xeSysAdmin And .UserLevel <> xeUserRights.xeEngineer Then
+            If .UserLevel <> xeUserRights.SYSADMIN And .UserLevel <> xeUserRights.ENGINEER Then
                 MsgBox("Insuficient User Rights Detected.", MsgBoxStyle.Critical, "Warning")
                 Exit Sub
             End If
@@ -478,6 +478,17 @@ errProc:
 
             .Show()
             .Grider = p_oAppDriver
+            .Refresh()
+        End With
+    End Sub
+
+    Private Sub BillingOfStatementToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BillingOfStatementToolStripMenuItem.Click
+        With frmSOAEntry
+            If isFormOpen(.Name) Then Exit Sub
+
+            .MdiParent = Me
+
+            .Show()
             .Refresh()
         End With
     End Sub

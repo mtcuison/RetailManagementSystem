@@ -88,7 +88,7 @@ Partial Class frmSysUser
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(3, 65)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(71, 16)
+        Me.Label3.Size = New System.Drawing.Size(70, 16)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Log Name"
         '
@@ -108,7 +108,7 @@ Partial Class frmSysUser
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(3, 12)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(53, 16)
+        Me.Label1.Size = New System.Drawing.Size(52, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "User ID"
         '
@@ -287,7 +287,7 @@ Partial Class frmSysUser
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.Location = New System.Drawing.Point(3, 115)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(53, 16)
+        Me.Label12.Size = New System.Drawing.Size(52, 16)
         Me.Label12.TabIndex = 6
         Me.Label12.Text = "Confirm"
         '
@@ -297,7 +297,7 @@ Partial Class frmSysUser
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(5, 322)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(78, 16)
+        Me.Label11.Size = New System.Drawing.Size(77, 16)
         Me.Label11.TabIndex = 24
         Me.Label11.Text = "Product Nm"
         '
@@ -307,7 +307,7 @@ Partial Class frmSysUser
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(5, 297)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(50, 16)
+        Me.Label10.Size = New System.Drawing.Size(49, 16)
         Me.Label10.TabIndex = 22
         Me.Label10.Text = "Branch"
         '
@@ -317,7 +317,7 @@ Partial Class frmSysUser
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(5, 269)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(72, 16)
+        Me.Label9.Size = New System.Drawing.Size(71, 16)
         Me.Label9.TabIndex = 20
         Me.Label9.Text = "User Type"
         '
@@ -327,7 +327,7 @@ Partial Class frmSysUser
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(5, 245)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(73, 16)
+        Me.Label8.Size = New System.Drawing.Size(72, 16)
         Me.Label8.TabIndex = 18
         Me.Label8.Text = "User Level"
         '
@@ -380,7 +380,7 @@ Partial Class frmSysUser
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(3, 218)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(56, 16)
+        Me.Label7.Size = New System.Drawing.Size(55, 16)
         Me.Label7.TabIndex = 16
         Me.Label7.Text = "Position"
         '
@@ -400,7 +400,7 @@ Partial Class frmSysUser
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(3, 193)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(78, 16)
+        Me.Label6.Size = New System.Drawing.Size(77, 16)
         Me.Label6.TabIndex = 14
         Me.Label6.Text = "Department"
         '
@@ -419,7 +419,7 @@ Partial Class frmSysUser
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(3, 168)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(91, 16)
+        Me.Label5.Size = New System.Drawing.Size(90, 16)
         Me.Label5.TabIndex = 12
         Me.Label5.Text = "Employee No"
         '
@@ -437,7 +437,7 @@ Partial Class frmSysUser
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(3, 143)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(69, 16)
+        Me.Label4.Size = New System.Drawing.Size(68, 16)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Full Name"
         '
@@ -456,7 +456,7 @@ Partial Class frmSysUser
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(3, 90)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(68, 16)
+        Me.Label2.Size = New System.Drawing.Size(67, 16)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Password"
         '
@@ -480,7 +480,7 @@ Partial Class frmSysUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(453, 452)
+        Me.ClientSize = New System.Drawing.Size(449, 448)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)

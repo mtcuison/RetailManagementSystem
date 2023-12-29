@@ -207,7 +207,7 @@ endProc:
             comboSource.Add("3", "Manager")
             comboSource.Add("4", "Auditor")
 
-            If p_oAppDriver.UserLevel = xeUserRights.xeEngineer Then
+            If p_oAppDriver.UserLevel = xeUserRights.ENGINEER Then
                 comboSource.Add("5", "Sys Admin")
                 comboSource.Add("6", "Owner")
                 comboSource.Add("7", "Engineer")
@@ -306,5 +306,9 @@ endProc:
 
     Private Sub cmbField06_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbField06.LostFocus
         p_oRecord.Master(6) = cmbField06.SelectedIndex
+    End Sub
+
+    Private Sub cmbField06_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbField06.SelectedIndexChanged
+
     End Sub
 End Class
