@@ -282,6 +282,11 @@ RetailManagementSystem
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:RetailManagementSystem.My.Resources.Resources.verify">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:RetailManagementSystem.My.Resources.Resources.void">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

@@ -22,6 +22,17 @@ Partial Class frmSOATagging
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.textSrch98 = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.textSrch99 = New System.Windows.Forms.TextBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.cmdButton03 = New System.Windows.Forms.Button()
+        Me.cmdButton02 = New System.Windows.Forms.Button()
+        Me.cmdButton01 = New System.Windows.Forms.Button()
+        Me.cmdButton00 = New System.Windows.Forms.Button()
+        Me.cmdButton04 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.cmbfield01 = New System.Windows.Forms.ComboBox()
         Me.lblStatus = New System.Windows.Forms.Label()
@@ -37,34 +48,148 @@ Partial Class frmSOATagging
         Me.txtField00 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.cmdButton05 = New System.Windows.Forms.Button()
-        Me.cmdButton02 = New System.Windows.Forms.Button()
-        Me.cmdButton03 = New System.Windows.Forms.Button()
-        Me.cmdButton00 = New System.Windows.Forms.Button()
-        Me.cmdButton01 = New System.Windows.Forms.Button()
-        Me.cmdButton06 = New System.Windows.Forms.Button()
-        Me.cmdButton04 = New System.Windows.Forms.Button()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.txtSearch00 = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.txtSearch01 = New System.Windows.Forms.TextBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.txtAmtPaid = New System.Windows.Forms.Label()
+        Me.txtTotalAmt = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.index00 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.index01 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.index02 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.index03 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.index04 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.index05 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Label12)
+        Me.GroupBox3.Controls.Add(Me.textSrch98)
+        Me.GroupBox3.Controls.Add(Me.Label11)
+        Me.GroupBox3.Controls.Add(Me.textSrch99)
+        Me.GroupBox3.Location = New System.Drawing.Point(109, 3)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(606, 42)
+        Me.GroupBox3.TabIndex = 18
+        Me.GroupBox3.TabStop = False
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(8, 15)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(80, 16)
+        Me.Label12.TabIndex = 0
+        Me.Label12.Text = "Client Name"
+        '
+        'textSrch98
+        '
+        Me.textSrch98.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textSrch98.Location = New System.Drawing.Point(120, 12)
+        Me.textSrch98.Name = "textSrch98"
+        Me.textSrch98.Size = New System.Drawing.Size(248, 22)
+        Me.textSrch98.TabIndex = 1
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(409, 16)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(36, 16)
+        Me.Label11.TabIndex = 2
+        Me.Label11.Text = "Date"
+        '
+        'textSrch99
+        '
+        Me.textSrch99.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textSrch99.Location = New System.Drawing.Point(469, 13)
+        Me.textSrch99.Name = "textSrch99"
+        Me.textSrch99.Size = New System.Drawing.Size(131, 22)
+        Me.textSrch99.TabIndex = 3
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.cmdButton03)
+        Me.GroupBox2.Controls.Add(Me.cmdButton02)
+        Me.GroupBox2.Controls.Add(Me.cmdButton01)
+        Me.GroupBox2.Controls.Add(Me.cmdButton00)
+        Me.GroupBox2.Controls.Add(Me.cmdButton04)
+        Me.GroupBox2.Location = New System.Drawing.Point(9, 3)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(94, 602)
+        Me.GroupBox2.TabIndex = 12
+        Me.GroupBox2.TabStop = False
+        '
+        'cmdButton03
+        '
+        Me.cmdButton03.Image = Global.RetailManagementSystem.My.Resources.Resources.cancel_update
+        Me.cmdButton03.Location = New System.Drawing.Point(6, 118)
+        Me.cmdButton03.Name = "cmdButton03"
+        Me.cmdButton03.Size = New System.Drawing.Size(82, 35)
+        Me.cmdButton03.TabIndex = 11
+        Me.cmdButton03.TabStop = False
+        Me.cmdButton03.Text = "Waive"
+        Me.cmdButton03.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdButton03.UseVisualStyleBackColor = True
+        '
+        'cmdButton02
+        '
+        Me.cmdButton02.Image = Global.RetailManagementSystem.My.Resources.Resources.verify
+        Me.cmdButton02.Location = New System.Drawing.Point(6, 83)
+        Me.cmdButton02.Name = "cmdButton02"
+        Me.cmdButton02.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.cmdButton02.Size = New System.Drawing.Size(82, 35)
+        Me.cmdButton02.TabIndex = 10
+        Me.cmdButton02.TabStop = False
+        Me.cmdButton02.Text = "Pay"
+        Me.cmdButton02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdButton02.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdButton02.UseVisualStyleBackColor = True
+        '
+        'cmdButton01
+        '
+        Me.cmdButton01.Image = Global.RetailManagementSystem.My.Resources.Resources.print
+        Me.cmdButton01.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdButton01.Location = New System.Drawing.Point(6, 48)
+        Me.cmdButton01.Name = "cmdButton01"
+        Me.cmdButton01.Size = New System.Drawing.Size(82, 35)
+        Me.cmdButton01.TabIndex = 8
+        Me.cmdButton01.TabStop = False
+        Me.cmdButton01.Text = "Print"
+        Me.cmdButton01.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdButton01.UseVisualStyleBackColor = True
+        '
+        'cmdButton00
+        '
+        Me.cmdButton00.Image = Global.RetailManagementSystem.My.Resources.Resources.browse
+        Me.cmdButton00.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdButton00.Location = New System.Drawing.Point(6, 13)
+        Me.cmdButton00.Name = "cmdButton00"
+        Me.cmdButton00.Size = New System.Drawing.Size(82, 35)
+        Me.cmdButton00.TabIndex = 5
+        Me.cmdButton00.Text = "       Browse"
+        Me.cmdButton00.UseVisualStyleBackColor = True
+        '
+        'cmdButton04
+        '
+        Me.cmdButton04.Image = Global.RetailManagementSystem.My.Resources.Resources._exit
+        Me.cmdButton04.Location = New System.Drawing.Point(6, 153)
+        Me.cmdButton04.Name = "cmdButton04"
+        Me.cmdButton04.Size = New System.Drawing.Size(82, 35)
+        Me.cmdButton04.TabIndex = 1
+        Me.cmdButton04.TabStop = False
+        Me.cmdButton04.Text = "Close"
+        Me.cmdButton04.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdButton04.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -82,15 +207,17 @@ Partial Class frmSOATagging
         Me.GroupBox1.Controls.Add(Me.txtField00)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Panel1)
-        Me.GroupBox1.Location = New System.Drawing.Point(101, 71)
+        Me.GroupBox1.Enabled = False
+        Me.GroupBox1.Location = New System.Drawing.Point(108, 44)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(450, 246)
-        Me.GroupBox1.TabIndex = 10
+        Me.GroupBox1.Size = New System.Drawing.Size(607, 224)
+        Me.GroupBox1.TabIndex = 19
         Me.GroupBox1.TabStop = False
         '
         'cmbfield01
         '
         Me.cmbfield01.FormattingEnabled = True
+        Me.cmbfield01.Items.AddRange(New Object() {"Charge Invoice", "Delivery Service"})
         Me.cmbfield01.Location = New System.Drawing.Point(124, 75)
         Me.cmbfield01.Name = "cmbfield01"
         Me.cmbfield01.Size = New System.Drawing.Size(131, 21)
@@ -100,7 +227,7 @@ Partial Class frmSOATagging
         '
         Me.lblStatus.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.lblStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStatus.Location = New System.Drawing.Point(313, 22)
+        Me.lblStatus.Location = New System.Drawing.Point(455, 22)
         Me.lblStatus.Name = "lblStatus"
         Me.lblStatus.Size = New System.Drawing.Size(131, 22)
         Me.lblStatus.TabIndex = 23
@@ -113,11 +240,10 @@ Partial Class frmSOATagging
         Me.txtField04.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtField04.Enabled = False
         Me.txtField04.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtField04.Location = New System.Drawing.Point(124, 183)
+        Me.txtField04.Location = New System.Drawing.Point(124, 171)
         Me.txtField04.Multiline = True
         Me.txtField04.Name = "txtField04"
-        Me.txtField04.ReadOnly = True
-        Me.txtField04.Size = New System.Drawing.Size(314, 56)
+        Me.txtField04.Size = New System.Drawing.Size(473, 44)
         Me.txtField04.TabIndex = 20
         '
         'Label7
@@ -138,7 +264,7 @@ Partial Class frmSOATagging
         Me.txtField02.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtField02.Location = New System.Drawing.Point(124, 99)
         Me.txtField02.Name = "txtField02"
-        Me.txtField02.Size = New System.Drawing.Size(314, 22)
+        Me.txtField02.Size = New System.Drawing.Size(244, 22)
         Me.txtField02.TabIndex = 3
         '
         'Label6
@@ -160,7 +286,7 @@ Partial Class frmSOATagging
         Me.txtField03.Multiline = True
         Me.txtField03.Name = "txtField03"
         Me.txtField03.ReadOnly = True
-        Me.txtField03.Size = New System.Drawing.Size(314, 56)
+        Me.txtField03.Size = New System.Drawing.Size(473, 44)
         Me.txtField03.TabIndex = 10
         '
         'Label5
@@ -207,6 +333,7 @@ Partial Class frmSOATagging
         '
         'txtField00
         '
+        Me.txtField00.Enabled = False
         Me.txtField00.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtField00.Location = New System.Drawing.Point(120, 13)
         Me.txtField00.Name = "txtField00"
@@ -233,190 +360,77 @@ Partial Class frmSOATagging
         Me.Panel1.Size = New System.Drawing.Size(131, 22)
         Me.Panel1.TabIndex = 2
         '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Controls.Add(Me.cmdButton05)
-        Me.GroupBox2.Controls.Add(Me.cmdButton02)
-        Me.GroupBox2.Controls.Add(Me.cmdButton03)
-        Me.GroupBox2.Controls.Add(Me.cmdButton00)
-        Me.GroupBox2.Controls.Add(Me.cmdButton01)
-        Me.GroupBox2.Controls.Add(Me.cmdButton06)
-        Me.GroupBox2.Controls.Add(Me.cmdButton04)
-        Me.GroupBox2.Location = New System.Drawing.Point(6, 3)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(89, 563)
-        Me.GroupBox2.TabIndex = 11
-        Me.GroupBox2.TabStop = False
-        '
-        'Button1
-        '
-        Me.Button1.Image = Global.RetailManagementSystem.My.Resources.Resources.print
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(6, 120)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(77, 35)
-        Me.Button1.TabIndex = 8
-        Me.Button1.TabStop = False
-        Me.Button1.Text = "Print"
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'cmdButton05
-        '
-        Me.cmdButton05.Image = Global.RetailManagementSystem.My.Resources.Resources.browse
-        Me.cmdButton05.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmdButton05.Location = New System.Drawing.Point(6, 13)
-        Me.cmdButton05.Name = "cmdButton05"
-        Me.cmdButton05.Size = New System.Drawing.Size(77, 35)
-        Me.cmdButton05.TabIndex = 5
-        Me.cmdButton05.Text = "       Browse"
-        Me.cmdButton05.UseVisualStyleBackColor = True
-        '
-        'cmdButton02
-        '
-        Me.cmdButton02.Image = Global.RetailManagementSystem.My.Resources.Resources.search
-        Me.cmdButton02.Location = New System.Drawing.Point(6, 13)
-        Me.cmdButton02.Name = "cmdButton02"
-        Me.cmdButton02.Size = New System.Drawing.Size(77, 35)
-        Me.cmdButton02.TabIndex = 4
-        Me.cmdButton02.TabStop = False
-        Me.cmdButton02.Text = "Search"
-        Me.cmdButton02.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdButton02.UseVisualStyleBackColor = True
-        '
-        'cmdButton03
-        '
-        Me.cmdButton03.Image = Global.RetailManagementSystem.My.Resources.Resources._exit
-        Me.cmdButton03.Location = New System.Drawing.Point(6, 156)
-        Me.cmdButton03.Name = "cmdButton03"
-        Me.cmdButton03.Size = New System.Drawing.Size(77, 35)
-        Me.cmdButton03.TabIndex = 1
-        Me.cmdButton03.TabStop = False
-        Me.cmdButton03.Text = "Close"
-        Me.cmdButton03.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdButton03.UseVisualStyleBackColor = True
-        '
-        'cmdButton00
-        '
-        Me.cmdButton00.Image = Global.RetailManagementSystem.My.Resources.Resources._new
-        Me.cmdButton00.Location = New System.Drawing.Point(6, 48)
-        Me.cmdButton00.Name = "cmdButton00"
-        Me.cmdButton00.Size = New System.Drawing.Size(77, 35)
-        Me.cmdButton00.TabIndex = 0
-        Me.cmdButton00.TabStop = False
-        Me.cmdButton00.Text = "New"
-        Me.cmdButton00.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdButton00.UseVisualStyleBackColor = True
-        '
-        'cmdButton01
-        '
-        Me.cmdButton01.Image = Global.RetailManagementSystem.My.Resources.Resources.save__2_
-        Me.cmdButton01.Location = New System.Drawing.Point(6, 48)
-        Me.cmdButton01.Name = "cmdButton01"
-        Me.cmdButton01.Size = New System.Drawing.Size(77, 35)
-        Me.cmdButton01.TabIndex = 2
-        Me.cmdButton01.TabStop = False
-        Me.cmdButton01.Text = "Save"
-        Me.cmdButton01.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdButton01.UseVisualStyleBackColor = True
-        '
-        'cmdButton06
-        '
-        Me.cmdButton06.Image = Global.RetailManagementSystem.My.Resources.Resources.update
-        Me.cmdButton06.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmdButton06.Location = New System.Drawing.Point(6, 84)
-        Me.cmdButton06.Name = "cmdButton06"
-        Me.cmdButton06.Size = New System.Drawing.Size(77, 35)
-        Me.cmdButton06.TabIndex = 7
-        Me.cmdButton06.TabStop = False
-        Me.cmdButton06.Text = "Update"
-        Me.cmdButton06.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdButton06.UseVisualStyleBackColor = True
-        '
-        'cmdButton04
-        '
-        Me.cmdButton04.Image = Global.RetailManagementSystem.My.Resources.Resources.cancel_update
-        Me.cmdButton04.Location = New System.Drawing.Point(6, 84)
-        Me.cmdButton04.Name = "cmdButton04"
-        Me.cmdButton04.Size = New System.Drawing.Size(77, 35)
-        Me.cmdButton04.TabIndex = 3
-        Me.cmdButton04.TabStop = False
-        Me.cmdButton04.Text = "Cancel"
-        Me.cmdButton04.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdButton04.UseVisualStyleBackColor = True
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.Label12)
-        Me.GroupBox3.Controls.Add(Me.txtSearch00)
-        Me.GroupBox3.Controls.Add(Me.Label11)
-        Me.GroupBox3.Controls.Add(Me.txtSearch01)
-        Me.GroupBox3.Location = New System.Drawing.Point(101, 3)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(450, 66)
-        Me.GroupBox3.TabIndex = 14
-        Me.GroupBox3.TabStop = False
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(8, 15)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(80, 16)
-        Me.Label12.TabIndex = 0
-        Me.Label12.Text = "Client Name"
-        '
-        'txtSearch00
-        '
-        Me.txtSearch00.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch00.Location = New System.Drawing.Point(120, 12)
-        Me.txtSearch00.Name = "txtSearch00"
-        Me.txtSearch00.Size = New System.Drawing.Size(318, 22)
-        Me.txtSearch00.TabIndex = 1
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(8, 39)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(36, 16)
-        Me.Label11.TabIndex = 2
-        Me.Label11.Text = "Date"
-        '
-        'txtSearch01
-        '
-        Me.txtSearch01.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch01.Location = New System.Drawing.Point(120, 37)
-        Me.txtSearch01.Name = "txtSearch01"
-        Me.txtSearch01.Size = New System.Drawing.Size(318, 22)
-        Me.txtSearch01.TabIndex = 3
-        '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.txtAmtPaid)
+        Me.GroupBox4.Controls.Add(Me.txtTotalAmt)
+        Me.GroupBox4.Controls.Add(Me.Label8)
+        Me.GroupBox4.Controls.Add(Me.Label3)
         Me.GroupBox4.Controls.Add(Me.DataGridView1)
         Me.GroupBox4.Controls.Add(Me.Label14)
-        Me.GroupBox4.Location = New System.Drawing.Point(101, 323)
+        Me.GroupBox4.Location = New System.Drawing.Point(108, 274)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(450, 243)
-        Me.GroupBox4.TabIndex = 17
+        Me.GroupBox4.Size = New System.Drawing.Size(607, 331)
+        Me.GroupBox4.TabIndex = 20
         Me.GroupBox4.TabStop = False
+        '
+        'txtAmtPaid
+        '
+        Me.txtAmtPaid.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.txtAmtPaid.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAmtPaid.Location = New System.Drawing.Point(432, 292)
+        Me.txtAmtPaid.Name = "txtAmtPaid"
+        Me.txtAmtPaid.Size = New System.Drawing.Size(169, 26)
+        Me.txtAmtPaid.TabIndex = 5
+        Me.txtAmtPaid.Text = "0.00"
+        Me.txtAmtPaid.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txtTotalAmt
+        '
+        Me.txtTotalAmt.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.txtTotalAmt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.txtTotalAmt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotalAmt.Location = New System.Drawing.Point(108, 292)
+        Me.txtTotalAmt.Name = "txtTotalAmt"
+        Me.txtTotalAmt.Size = New System.Drawing.Size(169, 26)
+        Me.txtTotalAmt.TabIndex = 4
+        Me.txtTotalAmt.Text = "0.00"
+        Me.txtTotalAmt.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(329, 297)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(106, 16)
+        Me.Label8.TabIndex = 3
+        Me.Label8.Text = "Amount Paid : "
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(-3, 297)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(110, 16)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Total Amount : "
         '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.index00, Me.index01, Me.index02, Me.index03, Me.index04})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.index00, Me.index01, Me.index02, Me.index03, Me.index04, Me.index05})
         Me.DataGridView1.Location = New System.Drawing.Point(8, 21)
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(430, 208)
+        Me.DataGridView1.Size = New System.Drawing.Size(589, 235)
         Me.DataGridView1.TabIndex = 1
         '
         'index00
@@ -430,46 +444,57 @@ Partial Class frmSOATagging
         Me.index00.ReadOnly = True
         Me.index00.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.index00.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.index00.Width = 40
+        Me.index00.Width = 31
         '
         'index01
         '
         Me.index01.DividerWidth = 1
-        Me.index01.HeaderText = "Source"
+        Me.index01.FillWeight = 120.0!
+        Me.index01.Frozen = True
+        Me.index01.HeaderText = "Service"
         Me.index01.Name = "index01"
         Me.index01.ReadOnly = True
         Me.index01.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.index01.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.index01.Width = 115
+        Me.index01.Width = 170
         '
         'index02
         '
         Me.index02.DividerWidth = 1
-        Me.index02.HeaderText = "Date"
+        Me.index02.HeaderText = "Source"
         Me.index02.Name = "index02"
         Me.index02.ReadOnly = True
         Me.index02.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.index02.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.index02.Width = 150
         '
         'index03
         '
         Me.index03.DividerWidth = 1
-        Me.index03.HeaderText = "Amount"
+        Me.index03.HeaderText = "Date"
         Me.index03.Name = "index03"
         Me.index03.ReadOnly = True
         Me.index03.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.index03.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.index03.Width = 120
+        Me.index03.Width = 95
         '
         'index04
         '
         Me.index04.DividerWidth = 1
-        Me.index04.HeaderText = "Paid"
+        Me.index04.HeaderText = "Amount"
         Me.index04.Name = "index04"
         Me.index04.ReadOnly = True
         Me.index04.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.index04.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.index04.Width = 51
+        Me.index04.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'index05
+        '
+        Me.index05.DividerWidth = 1
+        Me.index05.HeaderText = "Paid"
+        Me.index05.Name = "index05"
+        Me.index05.ReadOnly = True
+        Me.index05.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.index05.Width = 40
         '
         'Label14
         '
@@ -478,68 +503,70 @@ Partial Class frmSOATagging
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(6, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(129, 16)
+        Me.Label14.Size = New System.Drawing.Size(158, 16)
         Me.Label14.TabIndex = 0
-        Me.Label14.Text = "State of Billing Detail"
+        Me.Label14.Text = "Statement of Billing Detail"
         '
         'frmSOATagging
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(559, 569)
+        Me.ClientSize = New System.Drawing.Size(725, 610)
         Me.Controls.Add(Me.GroupBox4)
-        Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Name = "frmSOATagging"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Billing of Statement - Tagging"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
+        Me.Text = "Statement of Account - Tagging"
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents txtField02 As System.Windows.Forms.TextBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents txtField03 As System.Windows.Forms.TextBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents txtField01 As System.Windows.Forms.TextBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents txtField00 As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents cmdButton02 As System.Windows.Forms.Button
-    Friend WithEvents cmdButton01 As System.Windows.Forms.Button
-    Friend WithEvents cmdButton03 As System.Windows.Forms.Button
-    Friend WithEvents cmdButton00 As System.Windows.Forms.Button
-    Friend WithEvents txtField04 As System.Windows.Forms.TextBox
-    Friend WithEvents cmdButton05 As System.Windows.Forms.Button
-    Friend WithEvents cmdButton04 As System.Windows.Forms.Button
-    Friend WithEvents cmdButton06 As System.Windows.Forms.Button
-    Friend WithEvents lblStatus As System.Windows.Forms.Label
-    Friend WithEvents cmbfield01 As ComboBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents txtSearch00 As TextBox
+    Friend WithEvents textSrch98 As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents txtSearch01 As TextBox
+    Friend WithEvents textSrch99 As TextBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents cmdButton03 As Button
+    Friend WithEvents cmdButton02 As Button
+    Friend WithEvents cmdButton01 As Button
+    Friend WithEvents cmdButton00 As Button
+    Friend WithEvents cmdButton04 As Button
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents cmbfield01 As ComboBox
+    Friend WithEvents lblStatus As Label
+    Friend WithEvents txtField04 As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents txtField02 As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents txtField03 As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtField01 As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txtField00 As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Panel1 As Panel
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label14 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtTotalAmt As Label
+    Friend WithEvents Label8 As Label
     Friend WithEvents index00 As DataGridViewTextBoxColumn
     Friend WithEvents index01 As DataGridViewTextBoxColumn
     Friend WithEvents index02 As DataGridViewTextBoxColumn
     Friend WithEvents index03 As DataGridViewTextBoxColumn
     Friend WithEvents index04 As DataGridViewTextBoxColumn
+    Friend WithEvents index05 As DataGridViewCheckBoxColumn
+    Friend WithEvents txtAmtPaid As Label
 End Class

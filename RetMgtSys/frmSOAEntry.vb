@@ -8,10 +8,11 @@ Public Class frmSOAEntry
     Private pnLoadx As Integer
     Private pnIndex As Integer
     Private poControl As Control
+    Private Const p_sMsgHeadr As String = "Billing of Statement"
 
     Private Sub frmSOAEntry_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         If pnLoadx = 0 Then
-            oTrans = New clsSOA(p_oAppDriver)
+            oTrans = New clsSOA(p_oAppDriver, 12340)
 
             Call grpEventHandler(Me, GetType(TextBox), "txtField", "GotFocus", AddressOf txtField_GotFocus)
             Call grpEventHandler(Me, GetType(TextBox), "txtField", "LostFocus", AddressOf txtField_LostFocus)
@@ -19,7 +20,8 @@ Public Class frmSOAEntry
             Call grpEventHandler(Me, GetType(Button), "cmdButton", "Click", AddressOf cmdButton_Click)
 
             initButton()
-
+            InitGrid()
+            clearFields()
             pnLoadx = 1
         End If
     End Sub
@@ -43,9 +45,7 @@ Public Class frmSOAEntry
                             Case 3
                                 loTxt.Text = oTrans.Master(80)
                             Case 4
-                                If loTxt.Text <> "" Then
-                                    loTxt.Text = oTrans.Master(7)
-                                End If
+                                loTxt.Text = oTrans.Master(6)
                             Case Else
                                 loTxt.Text = oTrans.Master(loIndex)
                         End Select
@@ -54,20 +54,23 @@ Public Class frmSOAEntry
             End If 'If loTxt.HasChildren
         Next 'loTxt In loControl.Controls
         If oTrans.Master("cTranStat") <> "" Then
-            lblStatus.Text = TranStatus(oTrans.Master("cTranStat"))
+            lblStatus.Text = oTrans.TranStatus(oTrans.Master("cTranStat"))
         Else
             lblStatus.Text = "UNKNOWN"
         End If
         If oTrans.EditMode = xeEditMode.MODE_READY Then
             txtField01.ReadOnly = True
             txtField02.ReadOnly = True
+            LoadDetail()
         End If
 
-        'cmbfield01.SelectedIndex = IIf(oTrans.Master("sSourceCd") = "DS", 1, 0)
-
+        If oTrans.Master("sSourceCd") <> "" Then
+            cmbfield01.SelectedIndex = IIf(oTrans.Master("sSourceCd") = "DS", 1, 0)
+        End If
     End Sub
 
     Private Sub LoadDetail()
+
         With DataGridView1
             ' Assuming oTrans is an instance of your class with GetItemCount and Detail methods
             Dim itemCount As Integer = oTrans.GetItemDSCount()
@@ -75,19 +78,20 @@ Public Class frmSOAEntry
             ' Set the row count in the DataGridView
             .RowCount = itemCount
 
-            Debug.Print(itemCount)
-            If itemCount > 6 Then
-                .Columns(0).Width = 23
+            If itemCount > 9 Then
+                .Columns(2).Width = 133
             Else
-                .Columns(0).Width = 40
+                .Columns(2).Width = 150
             End If
+
             ' Loop through the items and populate the DataGridView
             For lnCtr As Integer = 0 To itemCount - 1
 
                 .Rows(lnCtr).Cells(0).Value = lnCtr + 1
                 .Rows(lnCtr).Cells(1).Value = oTrans.BillDetail(lnCtr, 1)
                 .Rows(lnCtr).Cells(2).Value = oTrans.BillDetail(lnCtr, 2)
-                .Rows(lnCtr).Cells(3).Value = oTrans.BillDetail(lnCtr, 3)
+                .Rows(lnCtr).Cells(3).Value = Format(CDate(oTrans.BillDetail(lnCtr, 3)), "MMMM dd, yyyy")
+                .Rows(lnCtr).Cells(4).Value = FormatNumber(CDbl(oTrans.BillDetail(lnCtr, 4)), 2)
             Next
 
             ' Go to the last row
@@ -96,6 +100,45 @@ Public Class frmSOAEntry
                 .CurrentCell = .Rows(itemCount - 1).Cells(0)
                 .Rows(itemCount - 1).Selected = True
             End If
+
+            If oTrans.EditMode = xeEditMode.MODE_READY Then
+                .ReadOnly = True
+            End If
+        End With
+
+
+    End Sub
+
+    Private Sub InitGrid()
+        With DataGridView1
+            'Set No of Columns
+            .ColumnCount = 6
+
+
+            'Set Column Headers
+            .Columns(0).HeaderText = "No."
+            .Columns(1).HeaderText = "Service"
+            .Columns(2).HeaderText = "Source"
+            .Columns(3).HeaderText = "Date"
+            .Columns(4).HeaderText = "Amount"
+            .Columns(5).HeaderText = "Bill"
+
+            'Set Column Sizes
+            .Columns(0).Width = 31
+            .Columns(1).Width = 170
+            .Columns(2).Width = 150
+            .Columns(3).Width = 95
+            .Columns(4).Width = 100
+            .Columns(5).Width = 40
+
+            'Set Cell Alignment
+            .Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
+
+            For Each column As DataGridViewColumn In .Columns
+                column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            Next
         End With
     End Sub
 
@@ -107,7 +150,11 @@ Public Class frmSOAEntry
         txtField03.Text = ""
         txtField04.Text = ""
         lblStatus.Text = "UNKNOWN"
-
+        cmbfield01.SelectedIndex = -1
+        DataGridView1.Rows.Clear()
+        InitGrid()
+        oTrans = Nothing
+        oTrans = New clsSOA(p_oAppDriver, 12340)
     End Sub
 
     Private Sub initButton()
@@ -120,6 +167,9 @@ Public Class frmSOAEntry
         cmdButton00.Visible = Not lbShow
         cmdButton03.Visible = Not lbShow
         cmdButton04.Visible = Not lbShow
+        cmdButton06.Visible = Not lbShow
+        cmdButton07.Visible = Not lbShow
+        cmdButton08.Visible = Not lbShow
         lblStatus.Visible = Not lbShow
 
         GroupBox1.Enabled = lbShow
@@ -128,6 +178,8 @@ Public Class frmSOAEntry
         txtField00.ReadOnly = Not lbShow
         txtField01.ReadOnly = Not lbShow
         txtField02.ReadOnly = Not lbShow
+        txtField04.Enabled = lbShow
+
 
 
         If oTrans.EditMode = xeEditMode.MODE_ADDNEW Then
@@ -167,27 +219,61 @@ Public Class frmSOAEntry
             Case 2 'search
                 Select Case pnIndex
                     Case 2
-                    Case 82
-                    Case 83
+                        If (txtField02.Text = "") Then Exit Sub
+
+                        oTrans.SearchMaster(2, txtField02.Text)
+
                 End Select
             Case 3 'close
                 Me.Close()
 
-            Case 5 'cancel
-                oTrans = Nothing
-                oTrans = New clsSOA(p_oAppDriver)
-                clearFields()
-                initButton()
             Case 4 'browse
+                If pnIndex < 98 Then
+                    pnIndex = 98
+                End If
                 Select Case pnIndex
 
                     Case 98
                         If (oTrans.SearchTransaction(textSrch98.Text, True)) Then
                             loadMaster(Me)
+                            textSrch98.Focus()
                         End If
                     Case 99
-                        oTrans.SearchTransaction(textSrch98.Tag, True)
+                        If oTrans.SearchTransaction(textSrch99.Text, False) Then
+                            loadMaster(Me)
+                            textSrch99.Focus()
+                        End If
                 End Select
+            Case 5 'cancel
+                oTrans = Nothing
+                oTrans = New clsSOA(p_oAppDriver, 12340)
+                clearFields()
+                initButton()
+            Case 6 'print
+                If Not txtField00.Text <> "" Then
+                    MsgBox("No Transaction seems to be Loaded! Please load Transaction first...", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, p_sMsgHeadr)
+                Else
+                    If (oTrans.PrintTransaction) Then
+
+                    End If
+                End If
+            Case 7
+                If Not txtField00.Text <> "" Then
+                    MsgBox("No Transaction seems to be Loaded! Please load Transaction first...", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, p_sMsgHeadr)
+                Else
+                    If (oTrans.CloseTransaction) Then
+                        MsgBox("Transaction Approved Successfuly. ", MsgBoxStyle.Information, "Notice")
+                    End If
+                End If
+
+            Case 8
+                If Not txtField00.Text <> "" Then
+                    MsgBox("No Transaction seems to be Loaded! Please load Transaction first...", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, p_sMsgHeadr)
+                Else
+                    If (oTrans.CancelTransaction) Then
+                        MsgBox("Transaction Disapproved Successfuly. ", MsgBoxStyle.Information, "Notice")
+                    End If
+                End If
 
         End Select
     End Sub
@@ -235,14 +321,13 @@ Public Class frmSOAEntry
                 Else
                     loTxt.Text = ""
                 End If
-            Case 8
+            Case 4
                 If (loTxt.Text <> "") Then
-                    oTrans.Master(9) = loTxt.Text
+                    oTrans.Master(6) = loTxt.Text
                 End If
             Case 99
                 If IsDate(loTxt.Text) Then
-                    loTxt.Text = Format(CDate(loTxt.Text), "MMMM dd, yyyy")
-                    loTxt.Tag = Format(CDate(loTxt.Text), "yyyy-MM-dd")
+                    loTxt.Text = Format(CDate(loTxt.Text), "yyyy-MM-dd")
                     'oTrans.Master(8) = loTxt.Text
                     'loTxt.Text = Format(CDate(oTrans.Master(8)), "MMMM dd, yyyy")
 
@@ -264,46 +349,45 @@ Public Class frmSOAEntry
                 txtField02.Text = Value
             Case 80
                 txtField03.Text = Value
-            Case 7
+            Case 6
                 txtField04.Text = Value
+            Case 9
+                lblStatus.Text = oTrans.TranStatus(oTrans.Master("cTranStat"))
         End Select
     End Sub
 
-    Private Sub txtField_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtField02.KeyDown
+    Private Sub txtField_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtField02.KeyDown, textSrch98.KeyDown, textSrch99.KeyDown
         If e.KeyCode = Keys.F3 Or e.KeyCode = Keys.Return Then
             Dim loTxt As TextBox
             loTxt = CType(sender, System.Windows.Forms.TextBox)
 
             Dim loIndex As Integer
+            Dim loIndexsearch As Integer
             loIndex = Val(Mid(loTxt.Name, 9))
-
+            loIndexsearch = Val(Mid(loTxt.Name, 9, 10))
             If Mid(loTxt.Name, 1, 8) = "txtField" Then
                 Select Case loIndex
                     Case 2
                         If (loTxt.Text = "") Then Exit Sub
 
                         oTrans.SearchMaster(2, loTxt.Text)
-                        'Case 3
-                        '    If (txtField02.Text = "") Then
-                        '        MsgBox("Please input Date!!", MsgBoxStyle.Information, "Notice")
-                        '        Exit Sub
-                        '    End If
-                        '    If (txtField02.Text <> "") Then oTrans.SearchMaster(loIndex, loTxt.Text)
-                        'Case 8
-                        '    If (txtField08.Text = "") Then
-                        '        MsgBox("Please input Note!!", MsgBoxStyle.Information, "Notice")
-                        '        Exit Sub
-                        '    End If
 
-                        'Case 80
-                        '    oTrans.SearchMaster(loIndex, loTxt.Text)
-                        'Case 81
-                        '    If (txtField80.Text = "") Then
-                        '        MsgBox("Please input Branch !!", MsgBoxStyle.Information, "Notice")
-                        '        Exit Sub
-                        '    End If
-                        '    If (txtField81.Text <> "") Then oTrans.SearchMaster(loIndex, loTxt.Text)
                 End Select
+            End If
+            If Mid(loTxt.Name, 1, 8) = "textSrch" Then
+                Select Case loIndexsearch
+                    Case 98
+                        If (oTrans.SearchTransaction(textSrch98.Text, True)) Then
+                            loadMaster(Me)
+                            textSrch98.Focus()
+                        End If
+                    Case 99
+                        If oTrans.SearchTransaction(textSrch99.Text, False) Then
+                            loadMaster(Me)
+                            textSrch99.Focus()
+                        End If
+                End Select
+
             End If
         End If
     End Sub
@@ -319,14 +403,34 @@ Public Class frmSOAEntry
 
 
     Private Sub cmbfield01_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbfield01.SelectedIndexChanged
-        oTrans.Master("sSourceCd") = IIf(cmbfield01.SelectedIndex = 0, "CI", "DS")
-        Debug.Print("source" + oTrans.Master("sSourceCd"))
-        If (oTrans.loadBilling()) Then
-            LoadDetail()
+        If cmbfield01.Enabled = True Then
+            If cmbfield01.SelectedIndex > 0 Then
 
+
+                oTrans.Master("sSourceCd") = IIf(cmbfield01.SelectedIndex = 0, "CI", "DS")
+
+                If (oTrans.loadBilling()) Then
+                    LoadDetail()
+
+                End If
+            End If
         End If
 
     End Sub
 
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        With DataGridView1
+            Dim lnRow As Integer = .CurrentRow.Index
 
+            If txtField02.Enabled = False Then Exit Sub
+            If e.ColumnIndex = 5 AndAlso e.RowIndex >= 0 Then
+                ' Toggle the checkbox value when the cell in column 5 is clicked
+                Dim cell As DataGridViewCell = DataGridView1.Rows(e.RowIndex).Cells(e.ColumnIndex)
+                cell.Value = Not Convert.ToBoolean(cell.Value)
+
+                oTrans.BillDetail(lnRow, 5) = IIf(cell.Value, 1, 0)
+
+            End If
+        End With
+    End Sub
 End Class

@@ -34,6 +34,7 @@ Partial Class mdiMain
         Me.AffiliatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BanksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BinToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeliveryServiceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DiscountCardsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InventoryTypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MachineToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -45,6 +46,10 @@ Partial Class mdiMain
         Me.SpecialDiscountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TransactionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BillingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BillingOfStatementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StateOfAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AdminitratorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BackendToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AccumulatedGrandTotalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -70,10 +75,6 @@ Partial Class mdiMain
         Me.tslUser = New System.Windows.Forms.ToolStripStatusLabel()
         Me.sfd = New System.Windows.Forms.SaveFileDialog()
         Me.ofd = New System.Windows.Forms.OpenFileDialog()
-        Me.TransactionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BillingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BillingOfStatementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StateOfAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -132,7 +133,7 @@ Partial Class mdiMain
         '
         'ParametersToolStripMenuItem
         '
-        Me.ParametersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AffiliatesToolStripMenuItem, Me.BanksToolStripMenuItem, Me.BinToolStripMenuItem, Me.DiscountCardsToolStripMenuItem, Me.InventoryTypeToolStripMenuItem, Me.MachineToolStripMenuItem, Me.MeasureToolStripMenuItem, Me.ProductCategoryToolStripMenuItem, Me.SectionToolStripMenuItem, Me.SizeToolStripMenuItem, Me.TermToolStripMenuItem, Me.SpecialDiscountToolStripMenuItem})
+        Me.ParametersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AffiliatesToolStripMenuItem, Me.BanksToolStripMenuItem, Me.BinToolStripMenuItem, Me.DeliveryServiceToolStripMenuItem, Me.DiscountCardsToolStripMenuItem, Me.InventoryTypeToolStripMenuItem, Me.MachineToolStripMenuItem, Me.MeasureToolStripMenuItem, Me.ProductCategoryToolStripMenuItem, Me.SectionToolStripMenuItem, Me.SizeToolStripMenuItem, Me.TermToolStripMenuItem, Me.SpecialDiscountToolStripMenuItem})
         Me.ParametersToolStripMenuItem.Name = "ParametersToolStripMenuItem"
         Me.ParametersToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.ParametersToolStripMenuItem.Text = "&Parameters"
@@ -154,6 +155,12 @@ Partial Class mdiMain
         Me.BinToolStripMenuItem.Name = "BinToolStripMenuItem"
         Me.BinToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.BinToolStripMenuItem.Text = "Bin"
+        '
+        'DeliveryServiceToolStripMenuItem
+        '
+        Me.DeliveryServiceToolStripMenuItem.Name = "DeliveryServiceToolStripMenuItem"
+        Me.DeliveryServiceToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.DeliveryServiceToolStripMenuItem.Text = "Delivery Service"
         '
         'DiscountCardsToolStripMenuItem
         '
@@ -220,6 +227,32 @@ Partial Class mdiMain
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
+        'TransactionToolStripMenuItem
+        '
+        Me.TransactionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BillingToolStripMenuItem})
+        Me.TransactionToolStripMenuItem.Name = "TransactionToolStripMenuItem"
+        Me.TransactionToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
+        Me.TransactionToolStripMenuItem.Text = "Transaction"
+        '
+        'BillingToolStripMenuItem
+        '
+        Me.BillingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BillingOfStatementToolStripMenuItem, Me.StateOfAccountToolStripMenuItem})
+        Me.BillingToolStripMenuItem.Name = "BillingToolStripMenuItem"
+        Me.BillingToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BillingToolStripMenuItem.Text = "Billing"
+        '
+        'BillingOfStatementToolStripMenuItem
+        '
+        Me.BillingOfStatementToolStripMenuItem.Name = "BillingOfStatementToolStripMenuItem"
+        Me.BillingOfStatementToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BillingOfStatementToolStripMenuItem.Text = "Billing of Statement"
+        '
+        'StateOfAccountToolStripMenuItem
+        '
+        Me.StateOfAccountToolStripMenuItem.Name = "StateOfAccountToolStripMenuItem"
+        Me.StateOfAccountToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StateOfAccountToolStripMenuItem.Text = "State of Account"
+        '
         'AdminitratorToolStripMenuItem
         '
         Me.AdminitratorToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackendToolStripMenuItem, Me.StandardToolStripMenuItem, Me.YReadingToolStripMenuItem, Me.TerminalZReadingToolStripMenuItem})
@@ -231,7 +264,7 @@ Partial Class mdiMain
         '
         Me.BackendToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AccumulatedGrandTotalToolStripMenuItem, Me.EventLogsToolStripMenuItem, Me.BIRSalesSummaryToolStripMenuItem, Me.CancelledReceiptToolStripMenuItem, Me.ItemListToolStripMenuItem, Me.SalesReportToolStripMenuItem, Me.VoidItemsToolStripMenuItem, Me.ComplementaryToolStripMenuItem, Me.ChargeToolStripMenuItem, Me.EJournalToolStripMenuItem, Me.DailySalesSummaryToolStripMenuItem, Me.SalesInventorySummaryToolStripMenuItem})
         Me.BackendToolStripMenuItem.Name = "BackendToolStripMenuItem"
-        Me.BackendToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BackendToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.BackendToolStripMenuItem.Text = "Standard"
         Me.BackendToolStripMenuItem.Visible = False
         '
@@ -310,20 +343,20 @@ Partial Class mdiMain
         'StandardToolStripMenuItem
         '
         Me.StandardToolStripMenuItem.Name = "StandardToolStripMenuItem"
-        Me.StandardToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StandardToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.StandardToolStripMenuItem.Text = "Standard"
         '
         'YReadingToolStripMenuItem
         '
         Me.YReadingToolStripMenuItem.Name = "YReadingToolStripMenuItem"
-        Me.YReadingToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.YReadingToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.YReadingToolStripMenuItem.Text = "Y-Reading"
         Me.YReadingToolStripMenuItem.Visible = False
         '
         'TerminalZReadingToolStripMenuItem
         '
         Me.TerminalZReadingToolStripMenuItem.Name = "TerminalZReadingToolStripMenuItem"
-        Me.TerminalZReadingToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TerminalZReadingToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.TerminalZReadingToolStripMenuItem.Text = "Z-Reading"
         '
         'UtilitiesToolStripMenuItem
@@ -373,32 +406,6 @@ Partial Class mdiMain
         'ofd
         '
         Me.ofd.FileName = "OpenFileDialog1"
-        '
-        'TransactionToolStripMenuItem
-        '
-        Me.TransactionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BillingToolStripMenuItem})
-        Me.TransactionToolStripMenuItem.Name = "TransactionToolStripMenuItem"
-        Me.TransactionToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
-        Me.TransactionToolStripMenuItem.Text = "Transaction"
-        '
-        'BillingToolStripMenuItem
-        '
-        Me.BillingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BillingOfStatementToolStripMenuItem, Me.StateOfAccountToolStripMenuItem})
-        Me.BillingToolStripMenuItem.Name = "BillingToolStripMenuItem"
-        Me.BillingToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.BillingToolStripMenuItem.Text = "Billing"
-        '
-        'BillingOfStatementToolStripMenuItem
-        '
-        Me.BillingOfStatementToolStripMenuItem.Name = "BillingOfStatementToolStripMenuItem"
-        Me.BillingOfStatementToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.BillingOfStatementToolStripMenuItem.Text = "Billing of Statement"
-        '
-        'StateOfAccountToolStripMenuItem
-        '
-        Me.StateOfAccountToolStripMenuItem.Name = "StateOfAccountToolStripMenuItem"
-        Me.StateOfAccountToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.StateOfAccountToolStripMenuItem.Text = "State of Account"
         '
         'mdiMain
         '
@@ -474,4 +481,5 @@ Partial Class mdiMain
     Friend WithEvents BillingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BillingOfStatementToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents StateOfAccountToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeliveryServiceToolStripMenuItem As ToolStripMenuItem
 End Class

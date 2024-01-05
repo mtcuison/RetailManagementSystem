@@ -1,368 +1,399 @@
-﻿'Imports ggcAppDriver
+﻿Imports System.Globalization
+Imports ADODB
+Imports ggcAppDriver
+Imports ggcReceipt
 
-'Public Class frmSOATagging
-'    Private WithEvents oTrans As TLMSalesMC
-'    Private pnLoadx As Integer
-'    Private pnIndex As Integer
-'    Private poControl As Control
+Public Class frmSOATagging
+    Private WithEvents oTrans As clsSOA
+    Private pnLoadx As Integer
+    Private pnIndex As Integer
+    Private pnAmtPaid As Double
+    Private poControl As Control
+    Private Const p_sMsgHeadr As String = "Statement of Account"
 
-'    Private Sub frmOGCallCustInfo_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-'        If pnLoadx = 0 Then
-'            oTrans = New TLMSalesMC(p_oAppDriver)
+    Private Sub frmSOATagging_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If pnLoadx = 0 Then
+            oTrans = New clsSOA(p_oAppDriver, 1)
 
-'            Call grpEventHandler(Me, GetType(TextBox), "txtField", "GotFocus", AddressOf txtField_GotFocus)
-'            Call grpEventHandler(Me, GetType(TextBox), "txtField", "LostFocus", AddressOf txtField_LostFocus)
-'            Call grpEventHandler(Me, GetType(Button), "cmdButton", "Click", AddressOf cmdButton_Click)
+            Call grpEventHandler(Me, GetType(TextBox), "txtField", "GotFocus", AddressOf txtField_GotFocus)
+            Call grpEventHandler(Me, GetType(TextBox), "txtField", "LostFocus", AddressOf txtField_LostFocus)
+            Call grpEventHandler(Me, GetType(TextBox), "textSrch", "LostFocus", AddressOf txtField_LostFocus)
+            Call grpEventHandler(Me, GetType(Button), "cmdButton", "Click", AddressOf cmdButton_Click)
 
-'            initButton()
+            initButton()
+            InitGrid()
+            clearFields()
+            pnLoadx = 1
+            pnAmtPaid = 0
+        End If
+    End Sub
 
-'            pnLoadx = 1
-'        End If
-'    End Sub
+    Private Sub loadMaster(ByVal loControl As Control)
+        Dim loTxt As Control
 
-'    Private Sub loadMaster(ByVal loControl As Control)
-'        Dim loTxt As Control
+        For Each loTxt In loControl.Controls
+            If loTxt.HasChildren Then
+                Call loadMaster(loTxt)
+            Else
+                If (TypeOf loTxt Is TextBox) Then
+                    Dim loIndex As Integer
+                    loIndex = Val(Mid(loTxt.Name, 9))
+                    If LCase(Mid(loTxt.Name, 1, 8)) = "txtfield" Then
+                        Select Case loIndex
+                            Case 1
+                                If (IsDate(oTrans.Master(loIndex))) Then
+                                    loTxt.Text = Format(oTrans.Master(loIndex), "MMMM dd, yyyy")
+                                End If
+                            Case 3
+                                loTxt.Text = oTrans.Master(80)
+                            Case 4
+                                loTxt.Text = oTrans.Master(6)
+                            Case Else
+                                loTxt.Text = oTrans.Master(loIndex)
+                        End Select
+                    End If 'LCase(Mid(loTxt.Name, 1, 8)) = "txtfield"
+                End If '(TypeOf loTxt Is TextBox)
+            End If 'If loTxt.HasChildren
+        Next 'loTxt In loControl.Controls
+        If oTrans.Master("cTranStat") <> "" Then
+            lblStatus.Text = oTrans.TranStatus(oTrans.Master("cTranStat"))
+        Else
+            lblStatus.Text = "UNKNOWN"
+        End If
 
-'        For Each loTxt In loControl.Controls
-'            If loTxt.HasChildren Then
-'                Call loadMaster(loTxt)
-'            Else
-'                If (TypeOf loTxt Is TextBox) Then
-'                    Dim loIndex As Integer
-'                    loIndex = Val(Mid(loTxt.Name, 9))
-'                    If LCase(Mid(loTxt.Name, 1, 8)) = "txtfield" Then
-'                        Select Case loIndex
-'                            Case 1
-'                                If oTrans.Master(8) <> "" Then
-'                                    loTxt.Text = Format(CDate(oTrans.Master(8)), "MMMM dd, yyyy")
-'                                Else
-'                                    loTxt.Text = oTrans.Master(8)
-'                                End If
-'                            Case 0
-'                                loTxt.Text = oTrans.Master(loIndex)
-'                            Case 2
-'                                loTxt.Text = oTrans.Master(loIndex)
-'                            Case 4
-'                                If oTrans.Master(loIndex) <> "" Then
-'                                    txtField03.Text = Format(CDate(oTrans.Master(loIndex)), "MMMM dd, yyyy")
-'                                Else
-'                                    txtField03.Text = ""
-'                                End If
-'                            Case 6
-'                                If oTrans.Master(loIndex) <> "" Then
-'                                    loTxt.Text = InquiryStatus(oTrans.Master(loIndex))
-'                                Else
-'                                    loTxt.Text = oTrans.Master(loIndex)
-'                                End If
-'                            Case 7
-'                                loTxt.Text = oTrans.Master("sAgentNme")
-'                            Case 8
-'                                loTxt.Text = oTrans.Master("sRemarksx")
-'                            Case Else
-'                                loTxt.Text = oTrans.Master(loIndex)
-'                        End Select
-'                    End If 'LCase(Mid(loTxt.Name, 1, 8)) = "txtfield"
-'                End If '(TypeOf loTxt Is TextBox)
-'            End If 'If loTxt.HasChildren
-'        Next 'loTxt In loControl.Controls
-'        If oTrans.Master("cTranStat") <> "" Then
-'            lblStatus.Text = TranStatus(oTrans.Master("cTranStat"))
-'        Else
-'            lblStatus.Text = "UNKNOWN"
-'        End If
-'        If oTrans.EditMode = xeEditMode.MODE_READY Then
-'            txtField01.ReadOnly = True
-'            txtField02.ReadOnly = True
-'            txtField02.ReadOnly = True
-'            txtField80.ReadOnly = True
-'            txtField81.ReadOnly = True
-'        End If
+        txtTotalAmt.Text = FormatNumber(CDbl(oTrans.Master("nTranTotl")), 2)
+        If oTrans.EditMode = xeEditMode.MODE_READY Then
+            txtField01.ReadOnly = True
+            txtField02.ReadOnly = True
+            LoadDetail()
+        End If
 
-'    End Sub
+        If oTrans.Master("sSourceCd") <> "" Then
+            cmbfield01.SelectedIndex = IIf(oTrans.Master("sSourceCd") = "DS", 1, 0)
+        End If
+    End Sub
 
-'    Private Sub clearFields()
-'        txtField00.Text = ""
-'        txtField01.Text = ""
-'        txtField02.Text = ""
-'        txtField02.Text = ""
-'        txtField03.Text = ""
-'        txtField04.Text = ""
-'        txtField06.Text = ""
-'        txtField07.Text = ""
-'        txtField08.Text = ""
+    Private Sub LoadDetail()
+        With DataGridView1
+            ' Assuming oTrans is an instance of your class with GetItemCount and Detail methods
+            Dim itemCount As Integer = oTrans.GetItemDSCount()
+            ' Set the row count in the DataGridView
+            .RowCount = itemCount
 
-'        txtField80.Text = ""
-'        txtField81.Text = ""
-'        txtfield82.Text = ""
-'        txtField83.Text = ""
-'        txtField84.Text = ""
-'        txtField85.Text = ""
-'        txtField86.Text = ""
-'        txtField87.Text = ""
-'        lblStatus.Text = "UNKNOWN"
+            If itemCount > 9 Then
+                .Columns(2).Width = 133
+            Else
+                .Columns(2).Width = 150
+            End If
 
-'    End Sub
+            'reset  pnAmtPaid to 0
+            pnAmtPaid = 0
+            txtAmtPaid.Text = FormatNumber(pnAmtPaid, 2)
+            ' Loop through the items and populate the DataGridView
+            For lnCtr As Integer = 0 To itemCount - 1
 
-'    Private Sub initButton()
-'        Dim lbShow As Boolean
-'        lbShow = oTrans.EditMode = xeEditMode.MODE_ADDNEW
+                .Rows(lnCtr).Cells(0).Value = lnCtr + 1
+                .Rows(lnCtr).Cells(1).Value = oTrans.BillDetail(lnCtr, 1)
+                .Rows(lnCtr).Cells(2).Value = oTrans.BillDetail(lnCtr, 2)
+                .Rows(lnCtr).Cells(3).Value = Format(CDate(oTrans.BillDetail(lnCtr, 3)), "MMMM dd, yyyy")
+                .Rows(lnCtr).Cells(4).Value = FormatNumber(CDbl(oTrans.BillDetail(lnCtr, 4)), 2)
+                .Rows(lnCtr).Cells(5).Value = IIf(oTrans.Detail(lnCtr, 4) = 1, True, False)
 
-'        cmdButton01.Visible = lbShow
-'        cmdButton02.Visible = lbShow
-'        cmdButton04.Visible = lbShow
-'        cmdButton00.Visible = Not lbShow
-'        cmdButton03.Visible = Not lbShow
-'        cmdButton05.Visible = Not lbShow
-'        cmdButton06.Visible = Not lbShow
-'        cmdButton06.Visible = Not lbShow
-'        cmdButton07.Visible = Not lbShow
-'        lblStatus.Visible = Not lbShow
+                If (oTrans.Detail(lnCtr, 4) = 1) Then
+                    pnAmtPaid += CDbl(oTrans.BillDetail(lnCtr, 4))
+                    txtAmtPaid.Text = FormatNumber(pnAmtPaid, 2)
+                End If
+            Next
 
-'        GroupBox1.Enabled = lbShow
-'        GroupBox3.Enabled = lbShow
+            ' Go to the last row
+            If itemCount > 1 Then
+                .ClearSelection()
+                .CurrentCell = .Rows(itemCount - 1).Cells(0)
+                .Rows(itemCount - 1).Selected = True
+            End If
+
+            If oTrans.EditMode = xeEditMode.MODE_READY Then
+                .ReadOnly = True
+            End If
+        End With
 
 
-'        txtField01.ReadOnly = Not lbShow
-'        txtField02.ReadOnly = Not lbShow
-'        txtField02.ReadOnly = Not lbShow
-'        txtField80.ReadOnly = Not lbShow
-'        txtField81.ReadOnly = Not lbShow
+    End Sub
+
+    Private Sub InitGrid()
+        With DataGridView1
+            'Set No of Columns
+            .ColumnCount = 6
 
 
-'        If oTrans.EditMode = xeEditMode.MODE_ADDNEW Then
-'            txtField01.Focus()
-'        End If
+            'Set Column Headers
+            .Columns(0).HeaderText = "No."
+            .Columns(1).HeaderText = "Service"
+            .Columns(2).HeaderText = "Source"
+            .Columns(3).HeaderText = "Date"
+            .Columns(4).HeaderText = "Amount"
+            .Columns(5).HeaderText = "Pay"
 
-'    End Sub
+            'Set Column Sizes
+            .Columns(0).Width = 31
+            .Columns(1).Width = 170
+            .Columns(2).Width = 150
+            .Columns(3).Width = 95
+            .Columns(4).Width = 100
+            .Columns(5).Width = 40
 
-'    Private Sub NewTransaction()
-'        clearFields()
-
-'        If oTrans.NewTransaction() Then
-'            loadMaster(Me)
-'            initButton()
-'        End If
-
-'    End Sub
-
-'    Private Sub cmdButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-'        Dim loChk As Button
-'        loChk = CType(sender, System.Windows.Forms.Button)
-
-'        Dim lnIndex As Integer
-'        lnIndex = Val(Mid(loChk.Name, 10))
-
-'        Select Case lnIndex
-'            Case 0 'new
-'                NewTransaction()
-'            Case 1 'save
-'                Call validateControl()
-'                If oTrans.SaveTransaction Then
-'                    MsgBox("Transaction Saved Successfuly.", MsgBoxStyle.Information, "Notice")
-'                    NewTransaction()
-'                End If
-
-'            Case 2 'search
-'                Select Case pnIndex
-'                    Case 2
-'                    Case 82
-'                    Case 83
-'                End Select
-'            Case 3 'close
-'                Me.Close()
-'            Case 4 'cancel
-'                oTrans = Nothing
-'                oTrans = New TLMSalesMC(p_oAppDriver)
-'                clearFields()
-'                initButton()
-'            Case 5 'cancel
-'                If oTrans.SearchTransaction("", False) Then
-'                    loadMaster(Me)
-'                Else
-'                    clearFields()
-'                End If
-'            Case 6 'Approved
-'                If txtField00.Text <> "" Then
-'                    If MsgBox("Do you want to confirm this Trasnaction?", vbQuestion + vbYesNo, "Confirm") = vbYes Then
-'                        If LCase(p_oAppDriver.ProductID) = "telemktg" Then
-'                            If oTrans.CloseTransaction() Then
-'                                MsgBox("Transaction Approved Successfuly.", MsgBoxStyle.Information, "Notice")
-'                                oTrans = Nothing
-'                                oTrans = New TLMSalesMC(p_oAppDriver)
-'                                clearFields()
-'                                initButton()
-'                            End If
-'                        Else
-'                            If oTrans.PostTransaction() Then
-'                                MsgBox("Transaction Posted Successfuly.", MsgBoxStyle.Information, "Notice")
-'                                oTrans = Nothing
-'                                oTrans = New TLMSalesMC(p_oAppDriver)
-'                                clearFields()
-'                                initButton()
-'                            End If
-'                        End If
-'                    End If
-'                End If
-'            Case 7 'Dissapproved
-'                If txtField00.Text <> "" Then
-'                    If MsgBox("Do you want to approved this Trasnaction?", vbQuestion + vbYesNo, "Confirm") = vbYes Then
-'                        If oTrans.CancelTransaction() Then
-'                            MsgBox("Transaction Dissapproved Successfuly.", MsgBoxStyle.Information, "Notice")
-'                            oTrans = Nothing
-'                            oTrans = New TLMSalesMC(p_oAppDriver)
-'                            clearFields()
-'                            initButton()
-'                        End If
-'                    End If
-'                End If
-'        End Select
-'    End Sub
-
-'    Private Sub txtField_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs)
-'        Dim loTxt As TextBox
-'        loTxt = CType(sender, System.Windows.Forms.TextBox)
-
-'        Dim loIndex As Integer
-'        loIndex = Val(Mid(loTxt.Name, 9))
-
-'        If Mid(loTxt.Name, 1, 8) = "txtField" Then
-'            Select Case loIndex
-'                Case 1
-'                    If loTxt.Text <> "" Then
-'                        If IsDate(loTxt.Text) Then
-'                            loTxt.Text = Format(CDate(oTrans.Master(8)), "yyyy/MM/dd")
-'                        Else
-'                            loTxt.Text = ""
-'                        End If
-'                    End If
-'            End Select
-'        End If
-
-'        poControl = loTxt
-
-'        loTxt.BackColor = Color.Azure
-'        loTxt.SelectAll()
-'    End Sub
-
-'    Private Sub txtField_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs)
-'        Dim loTxt As TextBox
-'        loTxt = CType(sender, System.Windows.Forms.TextBox)
-
-'        Dim loIndex As Integer
-'        loIndex = Val(Mid(loTxt.Name, 9))
-
-'        Select Case loIndex
-'            Case 1
-'                If IsDate(loTxt.Text) Then
-'                    loTxt.Text = Format(CDate(loTxt.Text), "yyyy-MM-dd")
-'                    oTrans.Master(8) = loTxt.Text
-'                    loTxt.Text = Format(CDate(oTrans.Master(8)), "MMMM dd, yyyy")
-
-'                Else
-'                    loTxt.Text = ""
-'                End If
-'            Case 8
-'                If (loTxt.Text <> "") Then
-'                    oTrans.Master(9) = loTxt.Text
-'                End If
-'        End Select
-
-'        pnIndex = loIndex
-
-'        loTxt.BackColor = SystemColors.Window
-'        poControl = Nothing
-'    End Sub
-
-'    Private Sub oTrans_MasterRetrieved(ByVal Index As Integer, ByVal Value As Object) Handles oTrans.MasterRetrieved
-'        Select Case Index
-'            Case 2
-'                txtField02.Text = Value
-'            Case 3
-'                txtField02.Text = Value
-'            Case 4
-'                If Value <> "" Then
-'                    txtField03.Text = Format(CDate(Value), "MMM dd, yyyy")
-'                Else
-'                    txtField03.Text = ""
-'                End If
-'            Case 5
-'                txtField04.Text = Value
-'            Case 6
-'                If Value <> "" Then
-'                    txtField06.Text = CallOutStatus(Value)
-'                End If
-'            Case 7
-'                txtField07.Text = Value
-'            Case 8
-'                txtField01.Text = Value
-'            Case 9
-'                txtField08.Text = Value
-'            Case 80
-'                txtField80.Text = Value
-'            Case 81
-'                txtField81.Text = Value
-'            Case 82
-'                txtfield82.Text = Value
-'            Case 83
-'                txtField83.Text = Value
-'            Case 84
-'                txtField84.Text = Value
-'            Case 85
-'                txtField85.Text = Value
-'            Case 86
-'                txtField86.Text = Value
-'            Case 87
-'                txtField87.Text = Value
-'        End Select
-'    End Sub
-
-'    Private Sub txtField_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtField02.KeyDown, txtField02.KeyDown
-'        If e.KeyCode = Keys.F3 Or e.KeyCode = Keys.Return Then
-'            Dim loTxt As TextBox
-'            loTxt = CType(sender, System.Windows.Forms.TextBox)
-
-'            Dim loIndex As Integer
-'            loIndex = Val(Mid(loTxt.Name, 9))
-
-'            If Mid(loTxt.Name, 1, 8) = "txtField" Then
-'                Select Case loIndex
-'                    Case 2
-'                        If (txtField01.Text = "") Then
-'                            MsgBox("Please input Date!!", MsgBoxStyle.Information, "Notice")
-'                            Exit Sub
-'                        End If
-'                        If (txtField02.Text <> "") Then oTrans.SearchMaster(loIndex, loTxt.Text)
-'                    Case 3
-'                        If (txtField02.Text = "") Then
-'                            MsgBox("Please input Date!!", MsgBoxStyle.Information, "Notice")
-'                            Exit Sub
-'                        End If
-'                        If (txtField02.Text <> "") Then oTrans.SearchMaster(loIndex, loTxt.Text)
-'                    Case 8
-'                        If (txtField08.Text = "") Then
-'                            MsgBox("Please input Note!!", MsgBoxStyle.Information, "Notice")
-'                            Exit Sub
-'                        End If
-
-'                    Case 80
-'                        oTrans.SearchMaster(loIndex, loTxt.Text)
-'                    Case 81
-'                        If (txtField80.Text = "") Then
-'                            MsgBox("Please input Branch !!", MsgBoxStyle.Information, "Notice")
-'                            Exit Sub
-'                        End If
-'                        If (txtField81.Text <> "") Then oTrans.SearchMaster(loIndex, loTxt.Text)
-'                End Select
-'            End If
-'        End If
-'    End Sub
+            'Set Cell Alignment
+            .Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
 
-'    'call this command to validate values since we are using lostfocus as substitute for validate
-'    Private Sub validateControl()
-'        txtField01.Focus()
+            For Each column As DataGridViewColumn In .Columns
+                column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+            Next
+        End With
+    End Sub
+
+    Private Sub clearFields()
+        txtField00.Text = ""
+        txtField01.Text = ""
+        txtField02.Text = ""
+        txtField02.Text = ""
+        txtField03.Text = ""
+        txtField04.Text = ""
+        lblStatus.Text = "UNKNOWN"
+        txtAmtPaid.Text = "0.00"
+        txtTotalAmt.Text = "0.00"
+        cmbfield01.SelectedIndex = -1
+        DataGridView1.Rows.Clear()
+        InitGrid()
+        oTrans = Nothing
+        oTrans = New clsSOA(p_oAppDriver, 1)
+    End Sub
+
+    Private Sub initButton()
+        Dim lbShow As Boolean
+        lbShow = oTrans.EditMode = xeEditMode.MODE_READY
+
+        cmdButton00.Visible = True
+        cmdButton01.Visible = True
+        cmdButton02.Visible = True
+        cmdButton03.Visible = True
+        cmdButton04.Visible = True
+        lblStatus.Visible = lbShow
+
+        GroupBox1.Enabled = False
+        GroupBox4.Enabled = lbShow
+
+        'txtField04.Enabled = Not lbShow
+        'txtField00.ReadOnly = Not lbShow
+        'txtField01.ReadOnly = Not lbShow
+        'txtField02.ReadOnly = Not lbShow
 
 
-'    End Sub
 
-'End Class
+    End Sub
+
+    Private Sub NewTransaction()
+        clearFields()
+
+        If oTrans.NewTransaction() Then
+            loadMaster(Me)
+            initButton()
+        End If
+
+    End Sub
+
+    Private Sub cmdButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Dim loChk As Button
+        loChk = CType(sender, System.Windows.Forms.Button)
+
+        Dim lnIndex As Integer
+        lnIndex = Val(Mid(loChk.Name, 10))
+
+        Select Case lnIndex
+            Case 0 'browse
+                If pnIndex < 98 Then
+                    pnIndex = 98
+                End If
+                Select Case pnIndex
+
+                    Case 98
+                        If (oTrans.SearchTransaction(textSrch98.Text, True)) Then
+                            loadMaster(Me)
+                            initButton()
+                            textSrch98.Focus()
+                        End If
+                    Case 99
+                        If oTrans.SearchTransaction(textSrch99.Text, False) Then
+                            loadMaster(Me)
+                            initButton()
+                            textSrch99.Focus()
+                        End If
+                End Select
+            Case 1 'print
+                If Not txtField00.Text <> "" Then
+                    MsgBox("No Transaction seems to be Loaded! Please load Transaction first...", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, p_sMsgHeadr)
+                Else
+                    If (oTrans.PrintTransaction) Then
+
+                    End If
+                End If
+            Case 2 'pay
+                If Not oTrans.isModified Then
+                    MsgBox("Details do not appear to have been modified. Please modify the transaction first.!! ", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, p_sMsgHeadr)
+                    Exit Sub
+                End If
+                If Not txtField00.Text <> "" Then
+                    MsgBox("No Transaction seems to be Loaded! Please load Transaction first...", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, p_sMsgHeadr)
+                Else
+                    If oTrans.PrePostTransaction Then
+                        MsgBox("Transaction Tag Successfuly.", MsgBoxStyle.Information, "Notice")
+                        initButton()
+                        LoadDetail()
+                    End If
+                End If
+            Case 3 'waive
+                MsgBox("Feature is Ongoing.", MsgBoxStyle.Information, "Notice")
+            Case 4 'close
+                Me.Close()
+                'Case 5 'cancel
+                '    oTrans = Nothing
+                '    oTrans = New clsSOA(p_oAppDriver, 1)
+                '    clearFields()
+                '    initButton()
+
+        End Select
+
+    End Sub
+
+    Private Sub txtField_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs)
+        Dim loTxt As TextBox
+        loTxt = CType(sender, System.Windows.Forms.TextBox)
+
+        Dim loIndex As Integer
+        loIndex = Val(Mid(loTxt.Name, 9))
+
+        If Mid(loTxt.Name, 1, 8) = "txtField" Then
+            Select Case loIndex
+                Case 1
+                    If loTxt.Text <> "" Then
+                        If IsDate(loTxt.Text) Then
+                            loTxt.Text = Format(CDate(oTrans.Master(8)), "yyyy/MM/dd")
+                        Else
+                            loTxt.Text = ""
+                        End If
+                    End If
+            End Select
+        End If
+
+        poControl = loTxt
+
+        loTxt.BackColor = Color.Azure
+        loTxt.SelectAll()
+    End Sub
+
+    Private Sub txtField_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs)
+        Dim loTxt As TextBox
+        loTxt = CType(sender, System.Windows.Forms.TextBox)
+
+        Dim loIndex As Integer
+        loIndex = Val(Mid(loTxt.Name, 9))
+
+        Select Case loIndex
+            Case 1
+                If IsDate(loTxt.Text) Then
+                    loTxt.Text = Format(CDate(loTxt.Text), "yyyy-MM-dd")
+                End If
+            Case 99
+                If IsDate(loTxt.Text) Then
+                    loTxt.Text = Format(CDate(loTxt.Text), "yyyy-MM-dd")
+                    'oTrans.Master(8) = loTxt.Text
+                    'loTxt.Text = Format(CDate(oTrans.Master(8)), "MMMM dd, yyyy")
+
+                Else
+                    loTxt.Text = ""
+                End If
+        End Select
+
+        pnIndex = loIndex
+
+        loTxt.BackColor = SystemColors.Window
+        poControl = Nothing
+    End Sub
+
+    Private Sub oTrans_MasterRetrieved(ByVal Index As Integer, ByVal Value As Object) Handles oTrans.MasterRetrieved
+
+        Select Case Index
+
+            Case 9
+                lblStatus.Text = oTrans.TranStatus(oTrans.Master("cTranStat"))
+        End Select
+    End Sub
+
+    Private Sub txtField_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles textSrch98.KeyDown, textSrch99.KeyDown
+        If e.KeyCode = Keys.F3 Or e.KeyCode = Keys.Return Then
+            Dim loTxt As TextBox
+            loTxt = CType(sender, System.Windows.Forms.TextBox)
+
+            Dim loIndexsearch As Integer
+            loIndexsearch = Val(Mid(loTxt.Name, 9, 10))
+
+            If Mid(loTxt.Name, 1, 8) = "textSrch" Then
+                Select Case loIndexsearch
+                    Case 98
+                        If (oTrans.SearchTransaction(textSrch98.Text, True)) Then
+                            loadMaster(Me)
+                            initButton()
+                            textSrch98.Focus()
+                        End If
+                    Case 99
+                        If oTrans.SearchTransaction(textSrch99.Text, False) Then
+                            loadMaster(Me)
+                            initButton()
+                            textSrch99.Focus()
+                        End If
+                End Select
+
+            End If
+        End If
+    End Sub
+
+
+    'call this command to validate values since we are using lostfocus as substitute for validate
+    Private Sub validateControl()
+        txtField01.Focus()
+
+
+    End Sub
+
+
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        With DataGridView1
+            Dim lnRow As Integer = .CurrentRow.Index
+
+            If Not oTrans.EditMode = xeEditMode.MODE_READY Then Exit Sub
+            If oTrans.BillDetail(lnRow, "cTranStat") = 2 Then
+                MsgBox("Unable to untag Paid Detail", MsgBoxStyle.Information, "Notice")
+                Exit Sub
+            End If
+            If e.ColumnIndex = 5 AndAlso e.RowIndex >= 0 Then
+                ' Toggle the checkbox value when the cell in column 5 is clicked
+                Dim cell As DataGridViewCell = DataGridView1.Rows(e.RowIndex).Cells(e.ColumnIndex)
+                cell.Value = Not Convert.ToBoolean(cell.Value)
+
+                oTrans.Detail(lnRow, 4) = IIf(cell.Value, 1, 0)
+
+
+                If (cell.Value = True) Then
+                    pnAmtPaid += CDbl(oTrans.BillDetail(lnRow, 4))
+                    txtAmtPaid.Text = FormatNumber(pnAmtPaid, 2)
+                Else
+                    pnAmtPaid -= CDbl(oTrans.BillDetail(lnRow, 4))
+                    txtAmtPaid.Text = FormatNumber(pnAmtPaid, 2)
+                End If
+            End If
+        End With
+    End Sub
+
+End Class

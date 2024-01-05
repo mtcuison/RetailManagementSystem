@@ -9,7 +9,7 @@ Public Class frmDiscount
     Private pnAcRow As Integer
     Private poControl As Control
 
-    Private WithEvents p_oRecord As clsDiscountCards
+    Private WithEvents p_oRecord As ggcRetailParams.clsDiscountCards
 
     Private Sub frmDiscount_Activated(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Activated
         If pnLoadx = 1 Then
@@ -35,7 +35,7 @@ Public Class frmDiscount
 
     Private Sub frmDiscount_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If pnLoadx = 0 Then
-            p_oRecord = New clsDiscountCards(p_oAppDriver)
+            p_oRecord = New ggcRetailParams.clsDiscountCards(p_oAppDriver)
             p_oRecord.InitRecord()
 
             Call grpEventHandler(Me, GetType(TextBox), "txtField", "GotFocus", AddressOf txtField_GotFocus)
@@ -107,12 +107,12 @@ endProc:
 
     Public Function isEntryOk() As Boolean
         If Trim(txtField01.Text = "") Then
-            MsgBox("No Description detected!" & vbCrLf & _
+            MsgBox("No Description detected!" & vbCrLf &
                    "Please check entry and try again!", MsgBoxStyle.Critical, "Warning")
             txtField01.Focus()
             Return False
         ElseIf Trim(txtField02.Text = "") Then
-            MsgBox("No Company Code detected!" & vbCrLf & _
+            MsgBox("No Company Code detected!" & vbCrLf &
                    "Please check entry and try again!.", MsgBoxStyle.Critical, "Warning")
             txtField02.Focus()
             Return False
@@ -162,7 +162,7 @@ endProc:
     End Sub
 
     Private Sub txtOther_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs)
-        If p_oRecord.EditMode = xeEditMode.xeModeUnknown Then Exit Sub
+        If p_oRecord.EditMode = xeEditMode.MODE_UNKNOWN Then Exit Sub
 
         Dim loTxt As TextBox
         loTxt = CType(sender, System.Windows.Forms.TextBox)
@@ -229,7 +229,7 @@ endProc:
     End Sub
 
     Private Sub txtField_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs)
-        If p_oRecord.EditMode = xeEditMode.xeModeUnknown Then Exit Sub
+        If p_oRecord.EditMode = xeEditMode.MODE_UNKNOWN Then Exit Sub
 
         Dim loTxt As TextBox
         loTxt = CType(sender, System.Windows.Forms.TextBox)
@@ -319,11 +319,11 @@ endProc:
         Dim loDta As DataTable
         Dim lsSQL As String
 
-        lsSQL = "SELECT " & _
-                " nMinAmtxx, " & _
-                " nDiscRate, " & _
-                " nDiscAmtx " & _
-                " FROM Discount_Card_Detail " & _
+        lsSQL = "SELECT " &
+                " nMinAmtxx, " &
+                " nDiscRate, " &
+                " nDiscAmtx " &
+                " FROM Discount_Card_Detail " &
                 " WHERE sCardIDxx = " & strParm(p_oRecord.Master("sCardIDxx"))
         loDta = p_oAppDriver.ExecuteQuery(lsSQL)
 

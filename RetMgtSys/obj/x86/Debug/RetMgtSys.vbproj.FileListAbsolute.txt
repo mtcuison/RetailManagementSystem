@@ -365,9 +365,15 @@ C:\GGC_Systems\vb.net\RetMgySys\RetailManagementSystem.exe.config
 C:\GGC_Systems\vb.net\RetMgySys\RetailManagementSystem.exe
 C:\GGC_Systems\vb.net\RetMgySys\RetailManagementSystem.pdb
 C:\GGC_Systems\vb.net\RetMgySys\RetailManagementSystem.xml
+C:\GGC_Systems\vb.net\RetMgtSys\WinSCP.exe
+C:\GGC_Systems\vb.net\RetMgtSys\RetailManagementSystem.exe.config
+C:\GGC_Systems\vb.net\RetMgtSys\RetailManagementSystem.exe
+C:\GGC_Systems\vb.net\RetMgtSys\RetailManagementSystem.pdb
+C:\GGC_Systems\vb.net\RetMgtSys\RetailManagementSystem.xml
 C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.AssemblyReference.cache
 C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.ResolveComReference.cache
 C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Form1.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDeliveryService.resources
 C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory1.resources
 C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscount.resources
 C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmEjournal.resources
@@ -396,11 +402,6 @@ C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug
 C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Resources.resources
 C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.GenerateResource.cache
 C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.CoreCompileInputs.cache
-C:\GGC_Systems\vb.net\RetMgtSys\WinSCP.exe
-C:\GGC_Systems\vb.net\RetMgtSys\RetailManagementSystem.exe.config
-C:\GGC_Systems\vb.net\RetMgtSys\RetailManagementSystem.exe
-C:\GGC_Systems\vb.net\RetMgtSys\RetailManagementSystem.pdb
-C:\GGC_Systems\vb.net\RetMgtSys\RetailManagementSystem.xml
 C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.CopyComplete
 C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.exe
 C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.xml

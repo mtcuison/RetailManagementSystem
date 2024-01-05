@@ -38,7 +38,9 @@ Partial Class frmSOAEntry
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.cmdButton08 = New System.Windows.Forms.Button()
+        Me.cmdButton07 = New System.Windows.Forms.Button()
+        Me.cmdButton06 = New System.Windows.Forms.Button()
         Me.cmdButton04 = New System.Windows.Forms.Button()
         Me.cmdButton02 = New System.Windows.Forms.Button()
         Me.cmdButton00 = New System.Windows.Forms.Button()
@@ -82,7 +84,7 @@ Partial Class frmSOAEntry
         Me.GroupBox1.Controls.Add(Me.txtField00)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Panel1)
-        Me.GroupBox1.Location = New System.Drawing.Point(101, 44)
+        Me.GroupBox1.Location = New System.Drawing.Point(106, 44)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(607, 224)
         Me.GroupBox1.TabIndex = 10
@@ -117,7 +119,6 @@ Partial Class frmSOAEntry
         Me.txtField04.Location = New System.Drawing.Point(124, 171)
         Me.txtField04.Multiline = True
         Me.txtField04.Name = "txtField04"
-        Me.txtField04.ReadOnly = True
         Me.txtField04.Size = New System.Drawing.Size(473, 44)
         Me.txtField04.TabIndex = 20
         '
@@ -237,7 +238,9 @@ Partial Class frmSOAEntry
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Controls.Add(Me.cmdButton08)
+        Me.GroupBox2.Controls.Add(Me.cmdButton07)
+        Me.GroupBox2.Controls.Add(Me.cmdButton06)
         Me.GroupBox2.Controls.Add(Me.cmdButton04)
         Me.GroupBox2.Controls.Add(Me.cmdButton02)
         Me.GroupBox2.Controls.Add(Me.cmdButton00)
@@ -246,22 +249,48 @@ Partial Class frmSOAEntry
         Me.GroupBox2.Controls.Add(Me.cmdbutton05)
         Me.GroupBox2.Location = New System.Drawing.Point(6, 3)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(89, 563)
+        Me.GroupBox2.Size = New System.Drawing.Size(94, 538)
         Me.GroupBox2.TabIndex = 11
         Me.GroupBox2.TabStop = False
         '
-        'Button1
+        'cmdButton08
         '
-        Me.Button1.Image = Global.RetailManagementSystem.My.Resources.Resources.print
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(6, 84)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(77, 35)
-        Me.Button1.TabIndex = 8
-        Me.Button1.TabStop = False
-        Me.Button1.Text = "Print"
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.cmdButton08.Image = Global.RetailManagementSystem.My.Resources.Resources.cancel_update
+        Me.cmdButton08.Location = New System.Drawing.Point(6, 153)
+        Me.cmdButton08.Name = "cmdButton08"
+        Me.cmdButton08.Size = New System.Drawing.Size(82, 35)
+        Me.cmdButton08.TabIndex = 11
+        Me.cmdButton08.TabStop = False
+        Me.cmdButton08.Text = "Disappr."
+        Me.cmdButton08.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdButton08.UseVisualStyleBackColor = True
+        '
+        'cmdButton07
+        '
+        Me.cmdButton07.Image = Global.RetailManagementSystem.My.Resources.Resources.verify
+        Me.cmdButton07.Location = New System.Drawing.Point(6, 118)
+        Me.cmdButton07.Name = "cmdButton07"
+        Me.cmdButton07.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.cmdButton07.Size = New System.Drawing.Size(82, 35)
+        Me.cmdButton07.TabIndex = 10
+        Me.cmdButton07.TabStop = False
+        Me.cmdButton07.Text = "Approve"
+        Me.cmdButton07.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdButton07.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdButton07.UseVisualStyleBackColor = True
+        '
+        'cmdButton06
+        '
+        Me.cmdButton06.Image = Global.RetailManagementSystem.My.Resources.Resources.print
+        Me.cmdButton06.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdButton06.Location = New System.Drawing.Point(6, 83)
+        Me.cmdButton06.Name = "cmdButton06"
+        Me.cmdButton06.Size = New System.Drawing.Size(82, 35)
+        Me.cmdButton06.TabIndex = 8
+        Me.cmdButton06.TabStop = False
+        Me.cmdButton06.Text = "Print"
+        Me.cmdButton06.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdButton06.UseVisualStyleBackColor = True
         '
         'cmdButton04
         '
@@ -269,7 +298,7 @@ Partial Class frmSOAEntry
         Me.cmdButton04.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.cmdButton04.Location = New System.Drawing.Point(6, 13)
         Me.cmdButton04.Name = "cmdButton04"
-        Me.cmdButton04.Size = New System.Drawing.Size(77, 35)
+        Me.cmdButton04.Size = New System.Drawing.Size(82, 35)
         Me.cmdButton04.TabIndex = 5
         Me.cmdButton04.Text = "       Browse"
         Me.cmdButton04.UseVisualStyleBackColor = True
@@ -279,7 +308,7 @@ Partial Class frmSOAEntry
         Me.cmdButton02.Image = Global.RetailManagementSystem.My.Resources.Resources.search
         Me.cmdButton02.Location = New System.Drawing.Point(6, 13)
         Me.cmdButton02.Name = "cmdButton02"
-        Me.cmdButton02.Size = New System.Drawing.Size(77, 35)
+        Me.cmdButton02.Size = New System.Drawing.Size(82, 35)
         Me.cmdButton02.TabIndex = 4
         Me.cmdButton02.TabStop = False
         Me.cmdButton02.Text = "Search"
@@ -291,7 +320,7 @@ Partial Class frmSOAEntry
         Me.cmdButton00.Image = Global.RetailManagementSystem.My.Resources.Resources._new
         Me.cmdButton00.Location = New System.Drawing.Point(6, 48)
         Me.cmdButton00.Name = "cmdButton00"
-        Me.cmdButton00.Size = New System.Drawing.Size(77, 35)
+        Me.cmdButton00.Size = New System.Drawing.Size(82, 35)
         Me.cmdButton00.TabIndex = 0
         Me.cmdButton00.TabStop = False
         Me.cmdButton00.Text = "New"
@@ -303,7 +332,7 @@ Partial Class frmSOAEntry
         Me.cmdButton01.Image = Global.RetailManagementSystem.My.Resources.Resources.save__2_
         Me.cmdButton01.Location = New System.Drawing.Point(6, 48)
         Me.cmdButton01.Name = "cmdButton01"
-        Me.cmdButton01.Size = New System.Drawing.Size(77, 35)
+        Me.cmdButton01.Size = New System.Drawing.Size(82, 35)
         Me.cmdButton01.TabIndex = 2
         Me.cmdButton01.TabStop = False
         Me.cmdButton01.Text = "Save"
@@ -313,9 +342,9 @@ Partial Class frmSOAEntry
         'cmdButton03
         '
         Me.cmdButton03.Image = Global.RetailManagementSystem.My.Resources.Resources._exit
-        Me.cmdButton03.Location = New System.Drawing.Point(6, 119)
+        Me.cmdButton03.Location = New System.Drawing.Point(6, 188)
         Me.cmdButton03.Name = "cmdButton03"
-        Me.cmdButton03.Size = New System.Drawing.Size(77, 35)
+        Me.cmdButton03.Size = New System.Drawing.Size(82, 35)
         Me.cmdButton03.TabIndex = 1
         Me.cmdButton03.TabStop = False
         Me.cmdButton03.Text = "Close"
@@ -325,9 +354,9 @@ Partial Class frmSOAEntry
         'cmdbutton05
         '
         Me.cmdbutton05.Image = Global.RetailManagementSystem.My.Resources.Resources.cancel_update
-        Me.cmdbutton05.Location = New System.Drawing.Point(6, 119)
+        Me.cmdbutton05.Location = New System.Drawing.Point(6, 83)
         Me.cmdbutton05.Name = "cmdbutton05"
-        Me.cmdbutton05.Size = New System.Drawing.Size(77, 35)
+        Me.cmdbutton05.Size = New System.Drawing.Size(82, 35)
         Me.cmdbutton05.TabIndex = 9
         Me.cmdbutton05.TabStop = False
         Me.cmdbutton05.Text = "Cancel"
@@ -340,7 +369,7 @@ Partial Class frmSOAEntry
         Me.GroupBox3.Controls.Add(Me.textSrch98)
         Me.GroupBox3.Controls.Add(Me.Label11)
         Me.GroupBox3.Controls.Add(Me.textSrch99)
-        Me.GroupBox3.Location = New System.Drawing.Point(101, 3)
+        Me.GroupBox3.Location = New System.Drawing.Point(107, 3)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(606, 42)
         Me.GroupBox3.TabIndex = 14
@@ -386,9 +415,9 @@ Partial Class frmSOAEntry
         '
         Me.GroupBox4.Controls.Add(Me.DataGridView1)
         Me.GroupBox4.Controls.Add(Me.Label14)
-        Me.GroupBox4.Location = New System.Drawing.Point(100, 274)
+        Me.GroupBox4.Location = New System.Drawing.Point(106, 274)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(607, 292)
+        Me.GroupBox4.Size = New System.Drawing.Size(607, 267)
         Me.GroupBox4.TabIndex = 17
         Me.GroupBox4.TabStop = False
         '
@@ -418,7 +447,7 @@ Partial Class frmSOAEntry
         Me.index00.ReadOnly = True
         Me.index00.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.index00.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.index00.Width = 30
+        Me.index00.Width = 31
         '
         'index01
         '
@@ -440,7 +469,7 @@ Partial Class frmSOAEntry
         Me.index02.ReadOnly = True
         Me.index02.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.index02.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.index02.Width = 115
+        Me.index02.Width = 150
         '
         'index03
         '
@@ -450,6 +479,7 @@ Partial Class frmSOAEntry
         Me.index03.ReadOnly = True
         Me.index03.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.index03.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.index03.Width = 95
         '
         'index04
         '
@@ -459,7 +489,6 @@ Partial Class frmSOAEntry
         Me.index04.ReadOnly = True
         Me.index04.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.index04.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.index04.Width = 120
         '
         'index05
         '
@@ -468,8 +497,7 @@ Partial Class frmSOAEntry
         Me.index05.Name = "index05"
         Me.index05.ReadOnly = True
         Me.index05.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.index05.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.index05.Width = 51
+        Me.index05.Width = 40
         '
         'Label14
         '
@@ -478,15 +506,15 @@ Partial Class frmSOAEntry
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(6, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(129, 16)
+        Me.Label14.Size = New System.Drawing.Size(158, 16)
         Me.Label14.TabIndex = 0
-        Me.Label14.Text = "State of Billing Detail"
+        Me.Label14.Text = "Statement of Billing Detail"
         '
         'frmSOAEntry
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(719, 569)
+        Me.ClientSize = New System.Drawing.Size(723, 548)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -534,7 +562,7 @@ Partial Class frmSOAEntry
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label14 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents cmdButton06 As Button
     Friend WithEvents cmdbutton05 As Button
     Friend WithEvents index00 As DataGridViewTextBoxColumn
     Friend WithEvents index01 As DataGridViewTextBoxColumn
@@ -542,4 +570,6 @@ Partial Class frmSOAEntry
     Friend WithEvents index03 As DataGridViewTextBoxColumn
     Friend WithEvents index04 As DataGridViewTextBoxColumn
     Friend WithEvents index05 As DataGridViewCheckBoxColumn
+    Friend WithEvents cmdButton07 As Button
+    Friend WithEvents cmdButton08 As Button
 End Class

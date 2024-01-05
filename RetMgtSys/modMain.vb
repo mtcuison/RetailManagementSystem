@@ -210,20 +210,6 @@ Module modMain
     End Sub
 
 
-    Function TranStatus(ByVal fnStatus As Int32) As String
-        If fnStatus = 0 Then
-            Return "OPEN"
-        ElseIf fnStatus = 1 Then
-            Return "CLOSED"
-        ElseIf fnStatus = 2 Then
-            Return "POSTED"
-        ElseIf fnStatus = 3 Then
-            Return "CANCELLED"
-        ElseIf fnStatus = 4 Then
-            Return "VOID"
-        Else
-            Return "UNKNOWN"
-        End If
-    End Function
+
 End Module
 
