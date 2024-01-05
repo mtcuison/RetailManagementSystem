@@ -1,6 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports ggcAppDriver
-Imports ggcRetailParams
 Imports ggcReceipt
 
 Public Class frmZReading

@@ -33,7 +33,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -70,18 +70,6 @@
     <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\GGC_Systems\vb.net\RetMgtSys\CrystalDecisions.Data.AdoDotNetInterop.dll</HintPath>
-    </Reference>
-    <Reference Include="ggcLRReports, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\GGC_Systems\vb.net\RetMgtSys\ggcLRReports.dll</HintPath>
-    </Reference>
-    <Reference Include="ggcTempObj, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\GGC_Systems\vb.net\RetMgtSys\ggcTempObj.dll</HintPath>
-    </Reference>
-    <Reference Include="Multimedia, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\GGC_Systems\vb.net\RetMgtSys\Multimedia.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -126,7 +114,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Import Include="ggcRMSReports" />
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="PdfSharp.Charting" />
     <Import Include="System" />
@@ -144,6 +131,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
     <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeliveryService.designer.vb">
+      <DependentUpon>frmDeliveryService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeliveryService.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmInventory1.designer.vb">
@@ -311,6 +304,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeliveryService.resx">
+      <DependentUpon>frmDeliveryService.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInventory1.resx">
       <DependentUpon>frmInventory1.vb</DependentUpon>
@@ -590,6 +586,20 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{2A75196C-D9EB-4129-B803-931327F72D5C}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print1.png" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\ggcAppDriver\ggcAppDriver.vbproj">
       <Project>{6fa248f3-a2ba-43df-be98-032e11714db5}</Project>
       <Name>ggcAppDriver</Name>
@@ -599,7 +609,7 @@
       <Name>ggcClient</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\ggcPayment\ggcPayment.vbproj">
-      <Project>{A7BB8738-7DD6-45A0-90C9-FC346648FBF3}</Project>
+      <Project>{a7bb8738-7dd6-45a0-90c9-fc346648fbf3}</Project>
       <Name>ggcPayment</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\ggcRetailParams\ggcRetailParams.vbproj">
@@ -614,20 +624,6 @@
       <Project>{59ddf956-b82b-46d8-955f-769d502647bf}</Project>
       <Name>ggcRMSReports</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="ADODB">
-      <Guid>{2A75196C-D9EB-4129-B803-931327F72D5C}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>8</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\print1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

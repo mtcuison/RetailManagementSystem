@@ -38,7 +38,7 @@ Partial Class frmSOAEntry
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.cmdButton06 = New System.Windows.Forms.Button()
         Me.cmdButton04 = New System.Windows.Forms.Button()
         Me.cmdButton02 = New System.Windows.Forms.Button()
         Me.cmdButton00 = New System.Windows.Forms.Button()
@@ -237,7 +237,7 @@ Partial Class frmSOAEntry
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Controls.Add(Me.cmdButton06)
         Me.GroupBox2.Controls.Add(Me.cmdButton04)
         Me.GroupBox2.Controls.Add(Me.cmdButton02)
         Me.GroupBox2.Controls.Add(Me.cmdButton00)
@@ -250,18 +250,18 @@ Partial Class frmSOAEntry
         Me.GroupBox2.TabIndex = 11
         Me.GroupBox2.TabStop = False
         '
-        'Button1
+        'cmdButton06
         '
-        Me.Button1.Image = Global.RetailManagementSystem.My.Resources.Resources.print
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(6, 84)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(77, 35)
-        Me.Button1.TabIndex = 8
-        Me.Button1.TabStop = False
-        Me.Button1.Text = "Print"
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.cmdButton06.Image = Global.RetailManagementSystem.My.Resources.Resources.print
+        Me.cmdButton06.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdButton06.Location = New System.Drawing.Point(6, 83)
+        Me.cmdButton06.Name = "cmdButton06"
+        Me.cmdButton06.Size = New System.Drawing.Size(77, 35)
+        Me.cmdButton06.TabIndex = 8
+        Me.cmdButton06.TabStop = False
+        Me.cmdButton06.Text = "Print"
+        Me.cmdButton06.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdButton06.UseVisualStyleBackColor = True
         '
         'cmdButton04
         '
@@ -313,7 +313,7 @@ Partial Class frmSOAEntry
         'cmdButton03
         '
         Me.cmdButton03.Image = Global.RetailManagementSystem.My.Resources.Resources._exit
-        Me.cmdButton03.Location = New System.Drawing.Point(6, 119)
+        Me.cmdButton03.Location = New System.Drawing.Point(6, 118)
         Me.cmdButton03.Name = "cmdButton03"
         Me.cmdButton03.Size = New System.Drawing.Size(77, 35)
         Me.cmdButton03.TabIndex = 1
@@ -325,7 +325,7 @@ Partial Class frmSOAEntry
         'cmdbutton05
         '
         Me.cmdbutton05.Image = Global.RetailManagementSystem.My.Resources.Resources.cancel_update
-        Me.cmdbutton05.Location = New System.Drawing.Point(6, 119)
+        Me.cmdbutton05.Location = New System.Drawing.Point(6, 83)
         Me.cmdbutton05.Name = "cmdbutton05"
         Me.cmdbutton05.Size = New System.Drawing.Size(77, 35)
         Me.cmdbutton05.TabIndex = 9
@@ -534,7 +534,7 @@ Partial Class frmSOAEntry
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label14 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents cmdButton06 As Button
     Friend WithEvents cmdbutton05 As Button
     Friend WithEvents index00 As DataGridViewTextBoxColumn
     Friend WithEvents index01 As DataGridViewTextBoxColumn

@@ -8,6 +8,7 @@ Public Class frmSOAEntry
     Private pnLoadx As Integer
     Private pnIndex As Integer
     Private poControl As Control
+    Private Const p_sMsgHeadr As String = "Billing of Statement"
 
     Private Sub frmSOAEntry_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         If pnLoadx = 0 Then
@@ -107,6 +108,7 @@ Public Class frmSOAEntry
         txtField03.Text = ""
         txtField04.Text = ""
         lblStatus.Text = "UNKNOWN"
+        cmbfield01.SelectedIndex = -1
 
     End Sub
 
@@ -120,6 +122,7 @@ Public Class frmSOAEntry
         cmdButton00.Visible = Not lbShow
         cmdButton03.Visible = Not lbShow
         cmdButton04.Visible = Not lbShow
+        cmdButton06.Visible = Not lbShow
         lblStatus.Visible = Not lbShow
 
         GroupBox1.Enabled = lbShow
@@ -167,27 +170,41 @@ Public Class frmSOAEntry
             Case 2 'search
                 Select Case pnIndex
                     Case 2
-                    Case 82
-                    Case 83
+                        If (txtField02.Text = "") Then Exit Sub
+
+                        oTrans.SearchMaster(2, txtField02.Text)
+
                 End Select
             Case 3 'close
                 Me.Close()
 
-            Case 5 'cancel
-                oTrans = Nothing
-                oTrans = New clsSOA(p_oAppDriver)
-                clearFields()
-                initButton()
             Case 4 'browse
+                If pnIndex < 98 Then
+                    pnIndex = 98
+                End If
                 Select Case pnIndex
 
                     Case 98
                         If (oTrans.SearchTransaction(textSrch98.Text, True)) Then
                             loadMaster(Me)
+                            textSrch98.Focus()
                         End If
                     Case 99
-                        oTrans.SearchTransaction(textSrch98.Tag, True)
+                        If oTrans.SearchTransaction(textSrch98.Tag, False) Then
+                            loadMaster(Me)
+                            textSrch99.Focus()
+                        End If
                 End Select
+            Case 5 'cancel
+                oTrans = Nothing
+                oTrans = New clsSOA(p_oAppDriver)
+                clearFields()
+                initButton()
+            Case 6 '
+                If Not txtField00.Text <> "" Then
+                    MsgBox("No Transaction seems to be Loaded! Please load Transaction first...", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, p_sMsgHeadr)
+
+                End If
 
         End Select
     End Sub
@@ -319,11 +336,13 @@ Public Class frmSOAEntry
 
 
     Private Sub cmbfield01_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbfield01.SelectedIndexChanged
-        oTrans.Master("sSourceCd") = IIf(cmbfield01.SelectedIndex = 0, "CI", "DS")
-        Debug.Print("source" + oTrans.Master("sSourceCd"))
-        If (oTrans.loadBilling()) Then
-            LoadDetail()
+        If cmbfield01.SelectedIndex > 0 Then
+            oTrans.Master("sSourceCd") = IIf(cmbfield01.SelectedIndex = 0, "CI", "DS")
 
+            If (oTrans.loadBilling()) Then
+                LoadDetail()
+
+            End If
         End If
 
     End Sub

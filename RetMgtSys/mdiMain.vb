@@ -492,4 +492,15 @@ errProc:
             .Refresh()
         End With
     End Sub
+
+    Private Sub DeliveryServiceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeliveryServiceToolStripMenuItem.Click
+        With frmDeliveryService
+            If isFormOpen(.Name) Then Exit Sub
+
+            .MdiParent = Me
+
+            .Show()
+            .Refresh()
+        End With
+    End Sub
 End Class
