@@ -8,7 +8,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{47A79276-68A9-4E77-AA1E-AEC962E3D884}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>
+    </StartupObject>
     <RootNamespace>RetailManagementSystem</RootNamespace>
     <AssemblyName>RetailManagementSystem</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -33,12 +34,12 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <OutputPath>C:\GGC_Systems\vb.net\RetMgySys\</OutputPath>
+    <OutputPath>..\..\..\..\..\..\GGC_Systems\vb.net\RetMgtSys\</OutputPath>
     <DocumentationFile>RetailManagementSystem.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <Prefer32Bit>false</Prefer32Bit>
@@ -58,7 +59,7 @@
     <OptionExplicit>On</OptionExplicit>
   </PropertyGroup>
   <PropertyGroup>
-    <OptionCompare>Binary</OptionCompare>
+    <OptionCompare>Text</OptionCompare>
   </PropertyGroup>
   <PropertyGroup>
     <OptionStrict>Off</OptionStrict>
@@ -66,61 +67,43 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\CrystalDecisions.Data.AdoDotNetInterop.dll</HintPath>
-    </Reference>
-    <Reference Include="ggcAppDriver, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\ggcAppDriver.dll</HintPath>
-    </Reference>
-    <Reference Include="ggcClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\ggcClient.dll</HintPath>
-    </Reference>
-    <Reference Include="ggcLRReports, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\ggcLRReports.dll</HintPath>
-    </Reference>
-    <Reference Include="ggcRetailSales">
-      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\ggcRetailSales.dll</HintPath>
-    </Reference>
-    <Reference Include="ggcTempObj, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\ggcTempObj.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\GGC_Systems\vb.net\RetMgtSys\CrystalDecisions.Data.AdoDotNetInterop.dll</HintPath>
     </Reference>
     <Reference Include="Multimedia, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\Multimedia.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\GGC_Systems\vb.net\RetMgtSys\Multimedia.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\GGC_Systems\vb.net\RetMgtSys\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data.Entity, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\MySql.Data.Entity.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\GGC_Systems\vb.net\RetMgtSys\MySql.Data.Entity.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Web, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\MySql.Web.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\GGC_Systems\vb.net\RetMgtSys\MySql.Web.dll</HintPath>
     </Reference>
     <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\PdfSharp.dll</HintPath>
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
     </Reference>
     <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\PdfSharp.Charting.dll</HintPath>
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
     </Reference>
     <Reference Include="Renci.SshNet, Version=2020.0.1.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\Renci.SshNet.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\GGC_Systems\vb.net\RetMgtSys\Renci.SshNet.dll</HintPath>
     </Reference>
     <Reference Include="stdole, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\stdole.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\GGC_Systems\vb.net\RetMgtSys\stdole.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
@@ -133,16 +116,14 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="WinSCPnet, Version=1.8.3.11749, Culture=neutral, PublicKeyToken=2271ec4a3c56d0bf, processorArchitecture=MSIL">
+    <Reference Include="WinSCPnet, Version=1.14.0.13797, Culture=neutral, PublicKeyToken=2271ec4a3c56d0bf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\GGC_Systems\vb.net\RetMgySys\WinSCPnet.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\GGC_Systems\vb.net\RetMgtSys\WinSCPnet.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Import Include="ggcRMSReports" />
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="PdfSharp.Charting" />
-    <Import Include="Renci.SshNet" />
     <Import Include="System" />
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
@@ -158,6 +139,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
     <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeliveryService.designer.vb">
+      <DependentUpon>frmDeliveryService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeliveryService.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmInventory1.designer.vb">
@@ -182,6 +169,18 @@
       <DependentUpon>frmReports.vb</DependentUpon>
     </Compile>
     <Compile Include="frmReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSOATagging.designer.vb">
+      <DependentUpon>frmSOATagging.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSOATagging.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSOAEntry.designer.vb">
+      <DependentUpon>frmSOAEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSOAEntry.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTerminal.Designer.vb">
@@ -320,6 +319,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDeliveryService.resx">
+      <DependentUpon>frmDeliveryService.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInventory1.resx">
       <DependentUpon>frmInventory1.vb</DependentUpon>
     </EmbeddedResource>
@@ -331,6 +333,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmReports.resx">
       <DependentUpon>frmReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSOATagging.resx">
+      <DependentUpon>frmSOATagging.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSOAEntry.resx">
+      <DependentUpon>frmSOAEntry.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTerminal.resx">
       <DependentUpon>frmTerminal.vb</DependentUpon>
@@ -399,6 +407,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -592,20 +601,6 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ggcPayment\ggcPayment.vbproj">
-      <Project>{A7BB8738-7DD6-45A0-90C9-FC346648FBF3}</Project>
-      <Name>ggcPayment</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\ggcRetailParams\ggcRetailParams\ggcRetailParams.vbproj">
-      <Project>{4883f473-c0b0-4266-a9ac-8e4bca3c4cb7}</Project>
-      <Name>ggcRetailParams</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\ggcRMSReports\ggcRMSReports.vbproj">
-      <Project>{59ddf956-b82b-46d8-955f-769d502647bf}</Project>
-      <Name>ggcRMSReports</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <COMReference Include="ADODB">
       <Guid>{2A75196C-D9EB-4129-B803-931327F72D5C}</Guid>
       <VersionMajor>2</VersionMajor>
@@ -615,15 +610,38 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
-    <COMReference Include="ggcAppDriver1">
-      <Guid>{C4CAE4CB-1528-4DC1-AD81-39CC335D0083}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>9</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ggcAppDriver\ggcAppDriver.vbproj">
+      <Project>{6fa248f3-a2ba-43df-be98-032e11714db5}</Project>
+      <Name>ggcAppDriver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ggcClient\ggcClient.vbproj">
+      <Project>{d1b85464-9368-4354-b294-3b5e555b61c3}</Project>
+      <Name>ggcClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ggcPayment\ggcPayment.vbproj">
+      <Project>{a7bb8738-7dd6-45a0-90c9-fc346648fbf3}</Project>
+      <Name>ggcPayment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ggcRetailParams\ggcRetailParams.vbproj">
+      <Project>{4883f473-c0b0-4266-a9ac-8e4bca3c4cb7}</Project>
+      <Name>ggcRetailParams</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ggcRetailSales\ggcRetailSales.vbproj">
+      <Project>{81352368-b116-4d39-8ffb-5a74905de7f8}</Project>
+      <Name>ggcRetailSales</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ggcRMSReports\ggcRMSReports.vbproj">
+      <Project>{59ddf956-b82b-46d8-955f-769d502647bf}</Project>
+      <Name>ggcRMSReports</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verify1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

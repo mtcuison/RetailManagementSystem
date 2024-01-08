@@ -107,12 +107,12 @@ endProc:
 
     Public Function isEntryOk() As Boolean
         If Trim(txtField01.Text = "") Then
-            MsgBox("No Description detected!" & vbCrLf & _
+            MsgBox("No Description detected!" & vbCrLf &
                    "Please check entry and try again!", MsgBoxStyle.Critical, "Warning")
             txtField01.Focus()
             Return False
         ElseIf Trim(txtField02.Text = "") Then
-            MsgBox("No Company Code detected!" & vbCrLf & _
+            MsgBox("No Company Code detected!" & vbCrLf &
                    "Please check entry and try again!.", MsgBoxStyle.Critical, "Warning")
             txtField02.Focus()
             Return False
@@ -166,7 +166,7 @@ endProc:
     End Sub
 
     Private Sub txtOther_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs)
-        If p_oRecord.EditMode = xeEditMode.xeModeUnknown Then Exit Sub
+        If p_oRecord.EditMode = xeEditMode.MODE_UNKNOWN Then Exit Sub
 
         Dim loTxt As TextBox
         loTxt = CType(sender, System.Windows.Forms.TextBox)
@@ -262,7 +262,7 @@ endProc:
     End Sub
 
     Private Sub txtField_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs)
-        If p_oRecord.EditMode = xeEditMode.xeModeUnknown Then Exit Sub
+        If p_oRecord.EditMode = xeEditMode.MODE_UNKNOWN Then Exit Sub
 
         Dim loTxt As TextBox
         loTxt = CType(sender, System.Windows.Forms.TextBox)
@@ -409,8 +409,8 @@ endProc:
             txtOther03.Text = .Rows(pnAcRow).Cells(3).Value
             txtOther04.Text = .Rows(pnAcRow).Cells(4).Value
 
-            If p_oRecord.EditMode = xeEditMode.xeModeAddNew Or
-                p_oRecord.EditMode = xeEditMode.xeModeUpdate Then
+            If p_oRecord.EditMode = xeEditMode.MODE_ADDNEW Or
+                p_oRecord.EditMode = xeEditMode.MODE_UPDATE Then
                 txtOther02.Focus()
                 pnIndex = 2
                 poControl = CType(txtOther02, System.Windows.Forms.TextBox)

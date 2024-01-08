@@ -232,6 +232,11 @@ RetailManagementSystem
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:RetailManagementSystem.My.Resources.Resources.print">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:RetailManagementSystem.My.Resources.Resources.refresh">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -273,6 +278,11 @@ RetailManagementSystem
 </summary>
 </member>
 <member name="P:RetailManagementSystem.My.Resources.Resources.update">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RetailManagementSystem.My.Resources.Resources.verify">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

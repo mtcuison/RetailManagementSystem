@@ -326,11 +326,6 @@ D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagement
 D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Resources.resources
 D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.GenerateResource.cache
 D:\LP POS\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.CoreCompileInputs.cache
-C:\GGC_Systems\vb.net\RetMgySys\WinSCP.exe
-C:\GGC_Systems\vb.net\RetMgySys\RetailManagementSystem.exe.config
-C:\GGC_Systems\vb.net\RetMgySys\RetailManagementSystem.exe
-C:\GGC_Systems\vb.net\RetMgySys\RetailManagementSystem.pdb
-C:\GGC_Systems\vb.net\RetMgySys\RetailManagementSystem.xml
 D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.AssemblyReference.cache
 D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\Interop.ggcAppDriver.dll
 D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.ResolveComReference.cache
@@ -365,3 +360,49 @@ D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\
 D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.exe
 D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.xml
 D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.pdb
+C:\GGC_Systems\vb.net\RetMgySys\WinSCP.exe
+C:\GGC_Systems\vb.net\RetMgySys\RetailManagementSystem.exe.config
+C:\GGC_Systems\vb.net\RetMgySys\RetailManagementSystem.exe
+C:\GGC_Systems\vb.net\RetMgySys\RetailManagementSystem.pdb
+C:\GGC_Systems\vb.net\RetMgySys\RetailManagementSystem.xml
+C:\GGC_Systems\vb.net\RetMgtSys\WinSCP.exe
+C:\GGC_Systems\vb.net\RetMgtSys\RetailManagementSystem.exe.config
+C:\GGC_Systems\vb.net\RetMgtSys\RetailManagementSystem.exe
+C:\GGC_Systems\vb.net\RetMgtSys\RetailManagementSystem.pdb
+C:\GGC_Systems\vb.net\RetMgtSys\RetailManagementSystem.xml
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.AssemblyReference.cache
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.ResolveComReference.cache
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Form1.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDeliveryService.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory1.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscount.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmEjournal.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmReports.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSOATagging.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSOAEntry.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerminal.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmZReading.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoDiscount.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmPromoAddOn.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSalesPromo.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSysUser.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmTerm.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmAffiliates.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBanks.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmBin.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmDiscountCard.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmInventory_Type.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMachine.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmMeasure.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmProduct_Category.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSection.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.frmSize.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.mdiMain.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.Resources.resources
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.GenerateResource.cache
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.CoreCompileInputs.cache
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetMgtSys.vbproj.CopyComplete
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.exe
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.xml
+C:\Users\Maynard\Documents\GitHub\RetailManagementSystem\RetMgtSys\obj\x86\Debug\RetailManagementSystem.pdb

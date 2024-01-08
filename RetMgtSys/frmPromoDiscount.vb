@@ -121,7 +121,7 @@ Public Class frmPromoDiscount
 
     Private Function isEntryOk()
         If txtField08.Text = CInt(0) Then
-            MsgBox("Base Quantity cannot be zero! ." & vbCrLf & _
+            MsgBox("Base Quantity cannot be zero! ." & vbCrLf &
                    "Please check entry and try again!", MsgBoxStyle.Information, "Error")
             txtField08.Focus()
             Return False
@@ -287,7 +287,7 @@ Public Class frmPromoDiscount
                     Me.Close()
                     GoTo endProc
                 Case 9
-                    If .EditMode = xeEditMode.xeModeAddNew Or .EditMode = xeEditMode.xeModeUpdate Then
+                    If .EditMode = xeEditMode.MODE_ADDNEW Or .EditMode = xeEditMode.MODE_UPDATE Then
                         If .Detail(.ItemCount - 1, "sStockIDx") <> "" Then
                             .newDetail()
                             loadDetail()
