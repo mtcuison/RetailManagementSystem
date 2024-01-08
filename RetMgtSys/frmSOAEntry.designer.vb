@@ -61,6 +61,9 @@ Partial Class frmSOAEntry
         Me.index04 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.index05 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtTotalAmt = New System.Windows.Forms.Label()
+        Me.chkBox01 = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -413,11 +416,14 @@ Partial Class frmSOAEntry
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.chkBox01)
+        Me.GroupBox4.Controls.Add(Me.txtTotalAmt)
+        Me.GroupBox4.Controls.Add(Me.Label3)
         Me.GroupBox4.Controls.Add(Me.DataGridView1)
         Me.GroupBox4.Controls.Add(Me.Label14)
         Me.GroupBox4.Location = New System.Drawing.Point(106, 274)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(607, 267)
+        Me.GroupBox4.Size = New System.Drawing.Size(607, 334)
         Me.GroupBox4.TabIndex = 17
         Me.GroupBox4.TabStop = False
         '
@@ -510,15 +516,53 @@ Partial Class frmSOAEntry
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "Statement of Billing Detail"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(317, 304)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(110, 16)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "Total Amount : "
+        '
+        'txtTotalAmt
+        '
+        Me.txtTotalAmt.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.txtTotalAmt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.txtTotalAmt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotalAmt.Location = New System.Drawing.Point(433, 299)
+        Me.txtTotalAmt.Margin = New System.Windows.Forms.Padding(3, 0, 6, 0)
+        Me.txtTotalAmt.Name = "txtTotalAmt"
+        Me.txtTotalAmt.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.txtTotalAmt.Size = New System.Drawing.Size(169, 26)
+        Me.txtTotalAmt.TabIndex = 5
+        Me.txtTotalAmt.Text = "0.00"
+        Me.txtTotalAmt.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'chkBox01
+        '
+        Me.chkBox01.AutoSize = True
+        Me.chkBox01.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkBox01.Location = New System.Drawing.Point(519, 265)
+        Me.chkBox01.Name = "chkBox01"
+        Me.chkBox01.Size = New System.Drawing.Size(78, 17)
+        Me.chkBox01.TabIndex = 6
+        Me.chkBox01.Text = "BILL ALL"
+        Me.chkBox01.UseVisualStyleBackColor = True
+        '
         'frmSOAEntry
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(723, 548)
+        Me.ClientSize = New System.Drawing.Size(723, 615)
+        Me.ControlBox = False
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "frmSOAEntry"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Billing of Statement - Entry"
@@ -572,4 +616,7 @@ Partial Class frmSOAEntry
     Friend WithEvents index05 As DataGridViewCheckBoxColumn
     Friend WithEvents cmdButton07 As Button
     Friend WithEvents cmdButton08 As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtTotalAmt As Label
+    Friend WithEvents chkBox01 As CheckBox
 End Class

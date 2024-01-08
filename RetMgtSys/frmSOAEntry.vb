@@ -7,6 +7,7 @@ Public Class frmSOAEntry
     Private WithEvents oTrans As clsSOA
     Private pnLoadx As Integer
     Private pnIndex As Integer
+    Private pnTotalAmt As Double
     Private poControl As Control
     Private Const p_sMsgHeadr As String = "Billing of Statement"
 
@@ -23,6 +24,7 @@ Public Class frmSOAEntry
             InitGrid()
             clearFields()
             pnLoadx = 1
+            pnTotalAmt = 0
         End If
     End Sub
 
@@ -70,7 +72,8 @@ Public Class frmSOAEntry
     End Sub
 
     Private Sub LoadDetail()
-
+        pnTotalAmt = 0
+        txtTotalAmt.Text = FormatNumber(pnTotalAmt, 2)
         With DataGridView1
             ' Assuming oTrans is an instance of your class with GetItemCount and Detail methods
             Dim itemCount As Integer = oTrans.GetItemDSCount()
@@ -87,13 +90,31 @@ Public Class frmSOAEntry
             ' Loop through the items and populate the DataGridView
             For lnCtr As Integer = 0 To itemCount - 1
 
+                Dim cCollectdValue = oTrans.BillDetail(lnCtr, 5)
                 .Rows(lnCtr).Cells(0).Value = lnCtr + 1
                 .Rows(lnCtr).Cells(1).Value = oTrans.BillDetail(lnCtr, 1)
                 .Rows(lnCtr).Cells(2).Value = oTrans.BillDetail(lnCtr, 2)
                 .Rows(lnCtr).Cells(3).Value = Format(CDate(oTrans.BillDetail(lnCtr, 3)), "MMMM dd, yyyy")
                 .Rows(lnCtr).Cells(4).Value = FormatNumber(CDbl(oTrans.BillDetail(lnCtr, 4)), 2)
+                If Not cCollectdValue <> "" Then
+                    .Rows(lnCtr).Cells(5).Value = IIf(Not (String.IsNullOrEmpty(cCollectdValue.ToString())), True, False)
+                Else
+                    .Rows(lnCtr).Cells(5).Value = IIf(cCollectdValue = 1, True, False)
+                End If
+
+
+                If (oTrans.BillDetail(lnCtr, 5) = 1) Then
+                    pnTotalAmt += CDbl(oTrans.BillDetail(lnCtr, 4))
+                    txtTotalAmt.Text = FormatNumber(pnTotalAmt, 2)
+                End If
             Next
 
+            If Not txtField04.Enabled = True Then
+                If isAllBilled() Then
+                    chkBox01.Checked = True
+                    chkBox01.Text = "UNBILL"
+                End If
+            End If
             ' Go to the last row
             If itemCount > 1 Then
                 .ClearSelection()
@@ -149,7 +170,11 @@ Public Class frmSOAEntry
         txtField02.Text = ""
         txtField03.Text = ""
         txtField04.Text = ""
+
+        txtTotalAmt.Text = "0.00"
         lblStatus.Text = "UNKNOWN"
+        chkBox01.Checked = False
+        chkBox01.Text = "BILL ALL"
         cmbfield01.SelectedIndex = -1
         DataGridView1.Rows.Clear()
         InitGrid()
@@ -179,6 +204,7 @@ Public Class frmSOAEntry
         txtField01.ReadOnly = Not lbShow
         txtField02.ReadOnly = Not lbShow
         txtField04.Enabled = lbShow
+        chkBox01.Enabled = lbShow
 
 
 
@@ -257,19 +283,21 @@ Public Class frmSOAEntry
 
                     End If
                 End If
-            Case 7
+            Case 7 'approve
                 If Not txtField00.Text <> "" Then
                     MsgBox("No Transaction seems to be Loaded! Please load Transaction first...", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, p_sMsgHeadr)
                 Else
+                    If Not p_oAppDriver.getUserApproval() Then Exit Sub
                     If (oTrans.CloseTransaction) Then
                         MsgBox("Transaction Approved Successfuly. ", MsgBoxStyle.Information, "Notice")
                     End If
                 End If
 
-            Case 8
+            Case 8 'disapprove
                 If Not txtField00.Text <> "" Then
                     MsgBox("No Transaction seems to be Loaded! Please load Transaction first...", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, p_sMsgHeadr)
                 Else
+                    If Not p_oAppDriver.getUserApproval() Then Exit Sub
                     If (oTrans.CancelTransaction) Then
                         MsgBox("Transaction Disapproved Successfuly. ", MsgBoxStyle.Information, "Notice")
                     End If
@@ -404,15 +432,15 @@ Public Class frmSOAEntry
 
     Private Sub cmbfield01_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbfield01.SelectedIndexChanged
         If cmbfield01.Enabled = True Then
-            If cmbfield01.SelectedIndex > 0 Then
-
+            If cmbfield01.SelectedIndex >= 0 Then
 
                 oTrans.Master("sSourceCd") = IIf(cmbfield01.SelectedIndex = 0, "CI", "DS")
 
                 If (oTrans.loadBilling()) Then
-                    LoadDetail()
 
                 End If
+                pnTotalAmt = 0
+                LoadDetail()
             End If
         End If
 
@@ -430,7 +458,70 @@ Public Class frmSOAEntry
 
                 oTrans.BillDetail(lnRow, 5) = IIf(cell.Value, 1, 0)
 
+                If (cell.Value = True) Then
+                    pnTotalAmt += CDbl(oTrans.BillDetail(lnRow, 4))
+                    txtTotalAmt.Text = FormatNumber(pnTotalAmt, 2)
+                Else
+                    pnTotalAmt -= CDbl(oTrans.BillDetail(lnRow, 4))
+                    txtTotalAmt.Text = FormatNumber(pnTotalAmt, 2)
+                End If
             End If
+            If isAllBilled() Then
+                chkBox01.Checked = True
+                chkBox01.Text = "UNBILL"
+            Else
+                chkBox01.Checked = False
+                chkBox01.Text = "BILL ALL"
+
+            End If
+        End With
+    End Sub
+
+    Private Function isAllBilled()
+
+        For lnRow As Integer = 0 To oTrans.GetItemDSCount() - 1
+            If Not (oTrans.BillDetail(lnRow, 5) = 1) Then
+                Return False
+            End If
+        Next
+
+        Return True
+    End Function
+
+
+    Private Sub chkBox01_Click(sender As Object, e As EventArgs) Handles chkBox01.Click
+        With DataGridView1
+
+            If chkBox01.Checked = True Then
+                pnTotalAmt = 0
+            End If
+            For lnRow As Integer = 0 To oTrans.GetItemDSCount() - 1
+                If chkBox01.Checked = True Then
+
+                    Dim CellBill As DataGridViewCell = .Rows(lnRow).Cells(5)
+                    CellBill.Value = Not Convert.ToBoolean(CellBill.Value)
+
+                    .Rows(lnRow).Cells(5).Value = True
+                    oTrans.BillDetail(lnRow, 5) = IIf(CellBill.Value, 1, 0)
+                    pnTotalAmt += CDbl(oTrans.BillDetail(lnRow, 4))
+                    txtTotalAmt.Text = FormatNumber(pnTotalAmt, 2)
+                    chkBox01.Text = "UNBILL"
+
+                Else
+                    Dim CellBill As DataGridViewCell = .Rows(lnRow).Cells(5)
+                    CellBill.Value = Not Convert.ToBoolean(CellBill.Value)
+                    pnTotalAmt -= CDbl(oTrans.BillDetail(lnRow, 4))
+                    .Rows(lnRow).Cells(5).Value = False
+                    oTrans.BillDetail(lnRow, 5) = IIf(CellBill.Value, 1, 0)
+                    txtTotalAmt.Text = FormatNumber(pnTotalAmt, 2)
+                    chkBox01.Text = "BILL ALL"
+
+                End If
+            Next
+
+
+
+
         End With
     End Sub
 End Class

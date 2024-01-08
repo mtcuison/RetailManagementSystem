@@ -1,4 +1,5 @@
 ﻿Imports System.Globalization
+Imports System.Linq.Expressions
 Imports ADODB
 Imports ggcAppDriver
 Imports ggcReceipt
@@ -91,20 +92,28 @@ Public Class frmSOATagging
             txtAmtPaid.Text = FormatNumber(pnAmtPaid, 2)
             ' Loop through the items and populate the DataGridView
             For lnCtr As Integer = 0 To itemCount - 1
-
+                Dim cCollectdValue = oTrans.BillDetail(lnCtr, 10)
                 .Rows(lnCtr).Cells(0).Value = lnCtr + 1
                 .Rows(lnCtr).Cells(1).Value = oTrans.BillDetail(lnCtr, 1)
                 .Rows(lnCtr).Cells(2).Value = oTrans.BillDetail(lnCtr, 2)
                 .Rows(lnCtr).Cells(3).Value = Format(CDate(oTrans.BillDetail(lnCtr, 3)), "MMMM dd, yyyy")
                 .Rows(lnCtr).Cells(4).Value = FormatNumber(CDbl(oTrans.BillDetail(lnCtr, 4)), 2)
-                .Rows(lnCtr).Cells(5).Value = IIf(oTrans.Detail(lnCtr, 4) = 1, True, False)
+                If Not cCollectdValue <> "" Then
+                    .Rows(lnCtr).Cells(5).Value = IIf(Not (String.IsNullOrEmpty(cCollectdValue.ToString())), True, False)
+                Else
+                    .Rows(lnCtr).Cells(5).Value = IIf(cCollectdValue = 1, True, False)
+                End If
 
-                If (oTrans.Detail(lnCtr, 4) = 1) Then
+                If (oTrans.BillDetail(lnCtr, 10) = 1) Then
                     pnAmtPaid += CDbl(oTrans.BillDetail(lnCtr, 4))
                     txtAmtPaid.Text = FormatNumber(pnAmtPaid, 2)
                 End If
             Next
 
+            If isAllPaid() Then
+                chkBox01.Checked = True
+                chkBox01.Text = "UNPAID"
+            End If
             ' Go to the last row
             If itemCount > 1 Then
                 .ClearSelection()
@@ -119,6 +128,16 @@ Public Class frmSOATagging
 
 
     End Sub
+    Private Function isAllPaid()
+
+        For lnRow As Integer = 0 To oTrans.GetItemDSCount() - 1
+            If Not (oTrans.BillDetail(lnRow, 10) = 1) Then
+                Return False
+            End If
+        Next
+
+        Return True
+    End Function
 
     Private Sub InitGrid()
         With DataGridView1
@@ -163,6 +182,8 @@ Public Class frmSOATagging
         lblStatus.Text = "UNKNOWN"
         txtAmtPaid.Text = "0.00"
         txtTotalAmt.Text = "0.00"
+
+        chkBox01.Text = "PAY ALL"
         cmbfield01.SelectedIndex = -1
         DataGridView1.Rows.Clear()
         InitGrid()
@@ -181,14 +202,18 @@ Public Class frmSOATagging
         cmdButton04.Visible = True
         lblStatus.Visible = lbShow
 
+
         GroupBox1.Enabled = False
         GroupBox4.Enabled = lbShow
 
-        'txtField04.Enabled = Not lbShow
-        'txtField00.ReadOnly = Not lbShow
-        'txtField01.ReadOnly = Not lbShow
-        'txtField02.ReadOnly = Not lbShow
+        If isAllPaid() Then
+            chkBox01.Enabled = True
+            chkBox01.Text = "UNPAID"
+        Else
+            chkBox01.Enabled = True
+            chkBox01.Text = "PAY ALL"
 
+        End If
 
 
     End Sub
@@ -250,10 +275,11 @@ Public Class frmSOATagging
                         MsgBox("Transaction Tag Successfuly.", MsgBoxStyle.Information, "Notice")
                         initButton()
                         LoadDetail()
+                        If isAllPaid() Then chkBox01.Enabled = True
                     End If
                 End If
             Case 3 'waive
-                MsgBox("Feature is Ongoing.", MsgBoxStyle.Information, "Notice")
+                MsgBox("This Feature is Ongoing.", MsgBoxStyle.Information, "Notice")
             Case 4 'close
                 Me.Close()
                 'Case 5 'cancel
@@ -366,14 +392,12 @@ Public Class frmSOATagging
 
     End Sub
 
-
-
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         With DataGridView1
             Dim lnRow As Integer = .CurrentRow.Index
-
+            Dim cCollectdValue = oTrans.BillDetail(lnRow, "cCollectd")
             If Not oTrans.EditMode = xeEditMode.MODE_READY Then Exit Sub
-            If oTrans.BillDetail(lnRow, "cTranStat") = 2 Then
+            If Not (String.IsNullOrEmpty(cCollectdValue.ToString()) OrElse cCollectdValue = 0) Then
                 MsgBox("Unable to untag Paid Detail", MsgBoxStyle.Information, "Notice")
                 Exit Sub
             End If
@@ -382,7 +406,8 @@ Public Class frmSOATagging
                 Dim cell As DataGridViewCell = DataGridView1.Rows(e.RowIndex).Cells(e.ColumnIndex)
                 cell.Value = Not Convert.ToBoolean(cell.Value)
 
-                oTrans.Detail(lnRow, 4) = IIf(cell.Value, 1, 0)
+
+                oTrans.BillDetail(lnRow, 10) = IIf(cell.Value, 1, 0)
 
 
                 If (cell.Value = True) Then
@@ -393,7 +418,60 @@ Public Class frmSOATagging
                     txtAmtPaid.Text = FormatNumber(pnAmtPaid, 2)
                 End If
             End If
+
+            If isAllPaid() Then
+                chkBox01.Checked = True
+                chkBox01.Text = "UNPAID"
+            Else
+                chkBox01.Checked = False
+                chkBox01.Text = "PAY ALL"
+
+            End If
         End With
     End Sub
 
+    Private Async Sub chkBox01_Click(sender As Object, e As EventArgs) Handles chkBox01.Click
+        With DataGridView1
+
+            If chkBox01.Checked = True Then
+                pnAmtPaid = 0
+            End If
+            For lnRow As Integer = 0 To oTrans.GetItemDSCount() - 1
+
+                Dim cCollectdValue = oTrans.BillDetail(lnRow, "cCollectd")
+
+                If chkBox01.Checked = True Then
+
+                    Dim CellBill As DataGridViewCell = .Rows(lnRow).Cells(5)
+                    CellBill.Value = Not Convert.ToBoolean(CellBill.Value)
+
+                    .Rows(lnRow).Cells(5).Value = True
+                    oTrans.BillDetail(lnRow, 10) = IIf(CellBill.Value, 1, 0)
+                    pnAmtPaid += CDbl(oTrans.BillDetail(lnRow, 4))
+                    txtAmtPaid.Text = FormatNumber(pnAmtPaid, 2)
+                    chkBox01.Text = "UNPAID"
+
+                Else
+
+                    If Not (String.IsNullOrEmpty(cCollectdValue.ToString()) OrElse cCollectdValue = 0) Then
+
+                        Continue For
+                    End If
+                    Dim CellBill As DataGridViewCell = .Rows(lnRow).Cells(5)
+                    CellBill.Value = Not Convert.ToBoolean(CellBill.Value)
+
+                    pnAmtPaid -= CDbl(oTrans.BillDetail(lnRow, 4))
+                    .Rows(lnRow).Cells(5).Value = False
+                    oTrans.BillDetail(lnRow, 10) = IIf(CellBill.Value, 1, 0)
+                    txtAmtPaid.Text = FormatNumber(pnAmtPaid, 2)
+                    chkBox01.Text = "PAY ALL"
+
+                End If
+            Next
+
+
+
+
+        End With
+    End Sub
 End Class

@@ -49,6 +49,7 @@ Partial Class frmSOATagging
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.chkBox01 = New System.Windows.Forms.CheckBox()
         Me.txtAmtPaid = New System.Windows.Forms.Label()
         Me.txtTotalAmt = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -362,6 +363,7 @@ Partial Class frmSOATagging
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.chkBox01)
         Me.GroupBox4.Controls.Add(Me.txtAmtPaid)
         Me.GroupBox4.Controls.Add(Me.txtTotalAmt)
         Me.GroupBox4.Controls.Add(Me.Label8)
@@ -374,12 +376,25 @@ Partial Class frmSOATagging
         Me.GroupBox4.TabIndex = 20
         Me.GroupBox4.TabStop = False
         '
+        'chkBox01
+        '
+        Me.chkBox01.AutoSize = True
+        Me.chkBox01.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkBox01.Location = New System.Drawing.Point(519, 265)
+        Me.chkBox01.Name = "chkBox01"
+        Me.chkBox01.Size = New System.Drawing.Size(77, 17)
+        Me.chkBox01.TabIndex = 7
+        Me.chkBox01.Text = " Pay ALL"
+        Me.chkBox01.UseVisualStyleBackColor = True
+        '
         'txtAmtPaid
         '
         Me.txtAmtPaid.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.txtAmtPaid.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAmtPaid.Location = New System.Drawing.Point(432, 292)
+        Me.txtAmtPaid.Margin = New System.Windows.Forms.Padding(0)
         Me.txtAmtPaid.Name = "txtAmtPaid"
+        Me.txtAmtPaid.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.txtAmtPaid.Size = New System.Drawing.Size(169, 26)
         Me.txtAmtPaid.TabIndex = 5
         Me.txtAmtPaid.Text = "0.00"
@@ -391,7 +406,9 @@ Partial Class frmSOATagging
         Me.txtTotalAmt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.txtTotalAmt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTotalAmt.Location = New System.Drawing.Point(108, 292)
+        Me.txtTotalAmt.Margin = New System.Windows.Forms.Padding(3, 0, 6, 0)
         Me.txtTotalAmt.Name = "txtTotalAmt"
+        Me.txtTotalAmt.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.txtTotalAmt.Size = New System.Drawing.Size(169, 26)
         Me.txtTotalAmt.TabIndex = 4
         Me.txtTotalAmt.Text = "0.00"
@@ -511,12 +528,16 @@ Partial Class frmSOATagging
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(725, 610)
+        Me.ClientSize = New System.Drawing.Size(725, 615)
+        Me.ControlBox = False
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox3)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.MaximizeBox = False
         Me.Name = "frmSOATagging"
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Statement of Account - Tagging"
         Me.GroupBox3.ResumeLayout(False)
@@ -569,4 +590,5 @@ Partial Class frmSOATagging
     Friend WithEvents index04 As DataGridViewTextBoxColumn
     Friend WithEvents index05 As DataGridViewCheckBoxColumn
     Friend WithEvents txtAmtPaid As Label
+    Friend WithEvents chkBox01 As CheckBox
 End Class
