@@ -114,10 +114,13 @@ Public Class frmDeliveryService
                 Case 5 'cancel
                     If .CancelUpdate() Then clearFields()
                 Case 6 'update
+
                     If Not txtField00.Text = "" Then
+                        If Not p_oAppDriver.getUserApproval Then Exit Sub
                         updateMaster()
                         .UpdateRecord()
                     End If
+
                 Case 7 'delete
                     If .DeleteRecord() Then clearFields()
                 Case 8 'close
@@ -245,5 +248,6 @@ endProc:
         loTxt.BackColor = SystemColors.Window
         poControl = Nothing
     End Sub
+
 
 End Class
