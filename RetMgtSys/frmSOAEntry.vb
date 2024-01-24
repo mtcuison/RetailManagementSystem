@@ -102,19 +102,21 @@ Public Class frmSOAEntry
                     .Rows(lnCtr).Cells(5).Value = IIf(cCollectdValue = 1, True, False)
                 End If
 
-
-                If (oTrans.BillDetail(lnCtr, 5) = 1) Then
-                    pnTotalAmt += CDbl(oTrans.BillDetail(lnCtr, 4))
-                    txtTotalAmt.Text = FormatNumber(pnTotalAmt, 2)
+                If cCollectdValue <> "" Then
+                    If (cCollectdValue = 1) Then
+                        pnTotalAmt += CDbl(oTrans.BillDetail(lnCtr, 4))
+                        txtTotalAmt.Text = FormatNumber(pnTotalAmt, 2)
+                    End If
+                    If Not txtField04.Enabled = True Then
+                        If isAllBilled() Then
+                            chkBox01.Checked = True
+                            chkBox01.Text = "UNBILL"
+                        End If
+                    End If
                 End If
             Next
 
-            If Not txtField04.Enabled = True Then
-                If isAllBilled() Then
-                    chkBox01.Checked = True
-                    chkBox01.Text = "UNBILL"
-                End If
-            End If
+
             ' Go to the last row
             If itemCount > 1 Then
                 .ClearSelection()
