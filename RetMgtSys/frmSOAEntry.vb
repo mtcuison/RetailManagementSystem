@@ -482,6 +482,10 @@ Public Class frmSOAEntry
     Private Function isAllBilled()
 
         For lnRow As Integer = 0 To oTrans.GetItemDSCount() - 1
+            If (oTrans.BillDetail(lnRow, 5) = "") Then
+                oTrans.BillDetail(lnRow, 5) = 0
+            End If
+
             If Not (oTrans.BillDetail(lnRow, 5) = 1) Then
                 Return False
             End If
