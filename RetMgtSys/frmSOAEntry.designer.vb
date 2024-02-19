@@ -53,6 +53,9 @@ Partial Class frmSOAEntry
         Me.Label11 = New System.Windows.Forms.Label()
         Me.textSrch99 = New System.Windows.Forms.TextBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.chkBox01 = New System.Windows.Forms.CheckBox()
+        Me.txtTotalAmt = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.index00 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.index01 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -61,9 +64,8 @@ Partial Class frmSOAEntry
         Me.index04 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.index05 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtTotalAmt = New System.Windows.Forms.Label()
-        Me.chkBox01 = New System.Windows.Forms.CheckBox()
+        Me.txtField05 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -73,6 +75,8 @@ Partial Class frmSOAEntry
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.txtField05)
         Me.GroupBox1.Controls.Add(Me.cmbfield01)
         Me.GroupBox1.Controls.Add(Me.lblStatus)
         Me.GroupBox1.Controls.Add(Me.txtField04)
@@ -427,6 +431,42 @@ Partial Class frmSOAEntry
         Me.GroupBox4.TabIndex = 17
         Me.GroupBox4.TabStop = False
         '
+        'chkBox01
+        '
+        Me.chkBox01.AutoSize = True
+        Me.chkBox01.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkBox01.Location = New System.Drawing.Point(519, 265)
+        Me.chkBox01.Name = "chkBox01"
+        Me.chkBox01.Size = New System.Drawing.Size(78, 17)
+        Me.chkBox01.TabIndex = 6
+        Me.chkBox01.Text = "BILL ALL"
+        Me.chkBox01.UseVisualStyleBackColor = True
+        '
+        'txtTotalAmt
+        '
+        Me.txtTotalAmt.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.txtTotalAmt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.txtTotalAmt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotalAmt.Location = New System.Drawing.Point(433, 299)
+        Me.txtTotalAmt.Margin = New System.Windows.Forms.Padding(3, 0, 6, 0)
+        Me.txtTotalAmt.Name = "txtTotalAmt"
+        Me.txtTotalAmt.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.txtTotalAmt.Size = New System.Drawing.Size(169, 26)
+        Me.txtTotalAmt.TabIndex = 5
+        Me.txtTotalAmt.Text = "0.00"
+        Me.txtTotalAmt.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(317, 304)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(110, 16)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "Total Amount : "
+        '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
@@ -516,41 +556,26 @@ Partial Class frmSOAEntry
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "Statement of Billing Detail"
         '
-        'Label3
+        'txtField05
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(317, 304)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(110, 16)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Total Amount : "
+        Me.txtField05.BackColor = System.Drawing.SystemColors.Window
+        Me.txtField05.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtField05.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtField05.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtField05.Location = New System.Drawing.Point(353, 74)
+        Me.txtField05.Name = "txtField05"
+        Me.txtField05.Size = New System.Drawing.Size(244, 22)
+        Me.txtField05.TabIndex = 29
         '
-        'txtTotalAmt
+        'Label8
         '
-        Me.txtTotalAmt.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.txtTotalAmt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.txtTotalAmt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotalAmt.Location = New System.Drawing.Point(433, 299)
-        Me.txtTotalAmt.Margin = New System.Windows.Forms.Padding(3, 0, 6, 0)
-        Me.txtTotalAmt.Name = "txtTotalAmt"
-        Me.txtTotalAmt.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.txtTotalAmt.Size = New System.Drawing.Size(169, 26)
-        Me.txtTotalAmt.TabIndex = 5
-        Me.txtTotalAmt.Text = "0.00"
-        Me.txtTotalAmt.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'chkBox01
-        '
-        Me.chkBox01.AutoSize = True
-        Me.chkBox01.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkBox01.Location = New System.Drawing.Point(519, 265)
-        Me.chkBox01.Name = "chkBox01"
-        Me.chkBox01.Size = New System.Drawing.Size(78, 17)
-        Me.chkBox01.TabIndex = 6
-        Me.chkBox01.Text = "BILL ALL"
-        Me.chkBox01.UseVisualStyleBackColor = True
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(294, 76)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(53, 16)
+        Me.Label8.TabIndex = 30
+        Me.Label8.Text = "Service"
         '
         'frmSOAEntry
         '
@@ -619,4 +644,6 @@ Partial Class frmSOAEntry
     Friend WithEvents Label3 As Label
     Friend WithEvents txtTotalAmt As Label
     Friend WithEvents chkBox01 As CheckBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents txtField05 As TextBox
 End Class

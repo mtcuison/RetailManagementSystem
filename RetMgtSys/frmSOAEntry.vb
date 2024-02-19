@@ -48,6 +48,9 @@ Public Class frmSOAEntry
                                 loTxt.Text = oTrans.Master(80)
                             Case 4
                                 loTxt.Text = oTrans.Master(6)
+
+                            Case 5
+                                loTxt.Text = ""
                             Case Else
                                 loTxt.Text = oTrans.Master(loIndex)
                         End Select
@@ -126,6 +129,9 @@ Public Class frmSOAEntry
 
             If oTrans.EditMode = xeEditMode.MODE_READY Then
                 .ReadOnly = True
+                txtField05.Text = oTrans.BillDetail(0, 15)
+            Else
+                txtField05.Text = ""
             End If
         End With
 
@@ -172,6 +178,7 @@ Public Class frmSOAEntry
         txtField02.Text = ""
         txtField03.Text = ""
         txtField04.Text = ""
+        txtField05.Text = ""
 
         txtTotalAmt.Text = "0.00"
         lblStatus.Text = "UNKNOWN"
@@ -240,6 +247,11 @@ Public Class frmSOAEntry
                 Call validateControl()
                 If oTrans.SaveTransaction Then
                     MsgBox("Transaction Saved Successfuly.", MsgBoxStyle.Information, "Notice")
+                    If MsgBox("Do you want to print this Transaction?", vbQuestion + vbYesNo, "Confirm") = vbYes Then
+                        If (oTrans.PrintTransaction()) Then
+
+                        End If
+                    End If
                     clearFields()
                     initButton()
                 End If
@@ -250,6 +262,26 @@ Public Class frmSOAEntry
                         If (txtField02.Text = "") Then Exit Sub
 
                         oTrans.SearchMaster(2, txtField02.Text)
+                    Case 5
+                        If (cmbfield01.SelectedIndex = 1) Then
+                            If (oTrans.SearchDeliveryService(txtField05.Text, False)) Then
+                                pnTotalAmt = 0
+                                LoadDetail()
+
+                                txtField05.Text = oTrans.BillDetail(0, 16)
+                            Else
+                                If (oTrans.loadBilling) Then
+
+                                End If
+                                pnTotalAmt = 0
+                                LoadDetail()
+
+                            End If
+                        ElseIf (cmbfield01.SelectedIndex = 0) Then
+                            MsgBox("This feature is not yet available", MsgBoxStyle.Information, "Notice")
+                        Else
+                            MsgBox("Please select source transaction first! ", MsgBoxStyle.Information, "Notice")
+                        End If
 
                 End Select
             Case 3 'close
@@ -281,17 +313,42 @@ Public Class frmSOAEntry
                 If Not txtField00.Text <> "" Then
                     MsgBox("No Transaction seems to be Loaded! Please load Transaction first...", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, p_sMsgHeadr)
                 Else
-                    If (oTrans.PrintTransaction) Then
+                    If (oTrans.Master("cPrintedx") = "1") Then
+                        If MsgBox("Do you want to re-print this Transaction?", vbQuestion + vbYesNo, "Confirm") = vbYes Then
+                            If (p_oAppDriver.getUserApproval) Then
+                                If (oTrans.PrintTransaction) Then
 
+                                End If
+                            End If
+
+                        End If
+                    Else
+                        oTrans.PrintTransaction()
                     End If
                 End If
             Case 7 'approve
                 If Not txtField00.Text <> "" Then
                     MsgBox("No Transaction seems to be Loaded! Please load Transaction first...", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, p_sMsgHeadr)
                 Else
+                    If oTrans.Master("cPrintedx") = "0" Then
+                        If MsgBox("This Transaction is not yet printed. Please print First!! Would you like to print to proceed ?", vbQuestion + vbYesNo, "Confirm") = vbYes Then
+                            If (oTrans.PrintTransaction()) Then
+
+                            End If
+                        Else
+                            Exit Sub
+                        End If
+
+                    End If
                     If Not p_oAppDriver.getUserApproval() Then Exit Sub
                     If (oTrans.CloseTransaction) Then
                         MsgBox("Transaction Approved Successfuly. ", MsgBoxStyle.Information, "Notice")
+                    End If
+
+                    If MsgBox("Do you want to print this Approved Transaction?", vbQuestion + vbYesNo, "Confirm") = vbYes Then
+                        If (oTrans.PrintTransaction()) Then
+
+                        End If
                     End If
                 End If
 
@@ -381,12 +438,15 @@ Public Class frmSOAEntry
                 txtField03.Text = Value
             Case 6
                 txtField04.Text = Value
+
+            Case 17
+                txtField05.Text = Value
             Case 9
                 lblStatus.Text = oTrans.TranStatus(oTrans.Master("cTranStat"))
         End Select
     End Sub
 
-    Private Sub txtField_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtField02.KeyDown, textSrch98.KeyDown, textSrch99.KeyDown
+    Private Sub txtField_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtField02.KeyDown, txtField05.KeyDown, textSrch98.KeyDown, textSrch99.KeyDown
         If e.KeyCode = Keys.F3 Or e.KeyCode = Keys.Return Then
             Dim loTxt As TextBox
             loTxt = CType(sender, System.Windows.Forms.TextBox)
@@ -401,6 +461,27 @@ Public Class frmSOAEntry
                         If (loTxt.Text = "") Then Exit Sub
 
                         oTrans.SearchMaster(2, loTxt.Text)
+
+                    Case 5
+                        If (cmbfield01.SelectedIndex = 1) Then
+                            If (oTrans.SearchDeliveryService(loTxt.Text, False)) Then
+                                pnTotalAmt = 0
+                                LoadDetail()
+
+                                txtField05.Text = oTrans.BillDetail(0, 16)
+                                Else
+                                    If (oTrans.loadBilling) Then
+
+                                End If
+                                pnTotalAmt = 0
+                                LoadDetail()
+
+                            End If
+                        ElseIf (cmbfield01.SelectedIndex = 0) Then
+                            MsgBox("This feature is not yet available", MsgBoxStyle.Information, "Notice")
+                        Else
+                            MsgBox("Please select source transaction first! ", MsgBoxStyle.Information, "Notice")
+                        End If
 
                 End Select
             End If
@@ -529,5 +610,9 @@ Public Class frmSOAEntry
 
 
         End With
+    End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+
     End Sub
 End Class

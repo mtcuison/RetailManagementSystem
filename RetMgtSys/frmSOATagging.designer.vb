@@ -30,7 +30,6 @@ Partial Class frmSOATagging
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.cmdButton03 = New System.Windows.Forms.Button()
         Me.cmdButton02 = New System.Windows.Forms.Button()
-        Me.cmdButton01 = New System.Windows.Forms.Button()
         Me.cmdButton00 = New System.Windows.Forms.Button()
         Me.cmdButton04 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -62,6 +61,8 @@ Partial Class frmSOATagging
         Me.index04 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.index05 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.txtField05 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -121,7 +122,6 @@ Partial Class frmSOATagging
         '
         Me.GroupBox2.Controls.Add(Me.cmdButton03)
         Me.GroupBox2.Controls.Add(Me.cmdButton02)
-        Me.GroupBox2.Controls.Add(Me.cmdButton01)
         Me.GroupBox2.Controls.Add(Me.cmdButton00)
         Me.GroupBox2.Controls.Add(Me.cmdButton04)
         Me.GroupBox2.Location = New System.Drawing.Point(9, 3)
@@ -133,7 +133,7 @@ Partial Class frmSOATagging
         'cmdButton03
         '
         Me.cmdButton03.Image = Global.RetailManagementSystem.My.Resources.Resources.cancel_update
-        Me.cmdButton03.Location = New System.Drawing.Point(6, 118)
+        Me.cmdButton03.Location = New System.Drawing.Point(6, 82)
         Me.cmdButton03.Name = "cmdButton03"
         Me.cmdButton03.Size = New System.Drawing.Size(82, 35)
         Me.cmdButton03.TabIndex = 11
@@ -145,7 +145,7 @@ Partial Class frmSOATagging
         'cmdButton02
         '
         Me.cmdButton02.Image = Global.RetailManagementSystem.My.Resources.Resources.verify
-        Me.cmdButton02.Location = New System.Drawing.Point(6, 83)
+        Me.cmdButton02.Location = New System.Drawing.Point(6, 48)
         Me.cmdButton02.Name = "cmdButton02"
         Me.cmdButton02.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.cmdButton02.Size = New System.Drawing.Size(82, 35)
@@ -155,19 +155,6 @@ Partial Class frmSOATagging
         Me.cmdButton02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.cmdButton02.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.cmdButton02.UseVisualStyleBackColor = True
-        '
-        'cmdButton01
-        '
-        Me.cmdButton01.Image = Global.RetailManagementSystem.My.Resources.Resources.print
-        Me.cmdButton01.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmdButton01.Location = New System.Drawing.Point(6, 48)
-        Me.cmdButton01.Name = "cmdButton01"
-        Me.cmdButton01.Size = New System.Drawing.Size(82, 35)
-        Me.cmdButton01.TabIndex = 8
-        Me.cmdButton01.TabStop = False
-        Me.cmdButton01.Text = "Print"
-        Me.cmdButton01.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdButton01.UseVisualStyleBackColor = True
         '
         'cmdButton00
         '
@@ -183,7 +170,7 @@ Partial Class frmSOATagging
         'cmdButton04
         '
         Me.cmdButton04.Image = Global.RetailManagementSystem.My.Resources.Resources._exit
-        Me.cmdButton04.Location = New System.Drawing.Point(6, 153)
+        Me.cmdButton04.Location = New System.Drawing.Point(6, 116)
         Me.cmdButton04.Name = "cmdButton04"
         Me.cmdButton04.Size = New System.Drawing.Size(82, 35)
         Me.cmdButton04.TabIndex = 1
@@ -194,6 +181,8 @@ Partial Class frmSOATagging
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.txtField05)
         Me.GroupBox1.Controls.Add(Me.cmbfield01)
         Me.GroupBox1.Controls.Add(Me.lblStatus)
         Me.GroupBox1.Controls.Add(Me.txtField04)
@@ -524,6 +513,27 @@ Partial Class frmSOATagging
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "Statement of Billing Detail"
         '
+        'txtField05
+        '
+        Me.txtField05.BackColor = System.Drawing.SystemColors.Window
+        Me.txtField05.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtField05.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtField05.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtField05.Location = New System.Drawing.Point(353, 74)
+        Me.txtField05.Name = "txtField05"
+        Me.txtField05.Size = New System.Drawing.Size(244, 22)
+        Me.txtField05.TabIndex = 30
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(294, 76)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(53, 16)
+        Me.Label9.TabIndex = 31
+        Me.Label9.Text = "Service"
+        '
         'frmSOATagging
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -559,7 +569,6 @@ Partial Class frmSOATagging
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents cmdButton03 As Button
     Friend WithEvents cmdButton02 As Button
-    Friend WithEvents cmdButton01 As Button
     Friend WithEvents cmdButton00 As Button
     Friend WithEvents cmdButton04 As Button
     Friend WithEvents GroupBox1 As GroupBox
@@ -591,4 +600,6 @@ Partial Class frmSOATagging
     Friend WithEvents index05 As DataGridViewCheckBoxColumn
     Friend WithEvents txtAmtPaid As Label
     Friend WithEvents chkBox01 As CheckBox
+    Friend WithEvents txtField05 As TextBox
+    Friend WithEvents Label9 As Label
 End Class

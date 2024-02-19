@@ -49,6 +49,8 @@ Public Class frmSOATagging
                                 loTxt.Text = oTrans.Master(80)
                             Case 4
                                 loTxt.Text = oTrans.Master(6)
+                            Case 5
+                                loTxt.Text = ""
                             Case Else
                                 loTxt.Text = oTrans.Master(loIndex)
                         End Select
@@ -123,6 +125,9 @@ Public Class frmSOATagging
 
             If oTrans.EditMode = xeEditMode.MODE_READY Then
                 .ReadOnly = True
+                txtField05.Text = oTrans.BillDetail(0, 15)
+            Else
+                txtField05.Text = ""
             End If
         End With
 
@@ -179,6 +184,7 @@ Public Class frmSOATagging
         txtField02.Text = ""
         txtField03.Text = ""
         txtField04.Text = ""
+        txtField05.Text = ""
         lblStatus.Text = "UNKNOWN"
         txtAmtPaid.Text = "0.00"
         txtTotalAmt.Text = "0.00"
@@ -196,7 +202,7 @@ Public Class frmSOATagging
         lbShow = oTrans.EditMode = xeEditMode.MODE_READY
 
         cmdButton00.Visible = True
-        cmdButton01.Visible = True
+        'cmdButton01.Visible = True
         cmdButton02.Visible = True
         cmdButton03.Visible = True
         cmdButton04.Visible = True
@@ -255,14 +261,14 @@ Public Class frmSOATagging
                             textSrch99.Focus()
                         End If
                 End Select
-            Case 1 'print
-                If Not txtField00.Text <> "" Then
-                    MsgBox("No Transaction seems to be Loaded! Please load Transaction first...", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, p_sMsgHeadr)
-                Else
-                    If (oTrans.PrintTransaction) Then
+            'Case 1 'print
+            '    If Not txtField00.Text <> "" Then
+            '        MsgBox("No Transaction seems to be Loaded! Please load Transaction first...", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, p_sMsgHeadr)
+            '    Else
+            '        If (oTrans.PrintTransaction) Then
 
-                    End If
-                End If
+            '        End If
+            '    End If
             Case 2 'pay
                 If Not oTrans.isModified Then
                     MsgBox("Details do not appear to have been modified. Please modify the transaction first.!! ", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, p_sMsgHeadr)
